@@ -152,7 +152,7 @@ void TorTools::on_ToggleLog_clicked()
         /*Install timer to force buffer write periodically*/
         buffTimer = new QTimer(this);
         connect(buffTimer,SIGNAL(timeout()),monitor,SLOT(forceBufferWrite()));
-        buffTimer->start();
+        buffTimer->start(5000);
         debug("Installed buffer timer.");
     }
     if (toStatus == "Turn Off Combat Logging"){
