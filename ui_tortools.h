@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'tortools.ui'
 **
-** Created: Sun May 13 17:12:43 2012
+** Created: Mon May 14 02:13:56 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -673,7 +673,7 @@ public:
         label_14->setFont(font2);
         label_15 = new QLabel(accTab);
         label_15->setObjectName(QString::fromUtf8("label_15"));
-        label_15->setGeometry(QRect(400, 100, 321, 31));
+        label_15->setGeometry(QRect(390, 100, 331, 31));
         charList = new QListWidget(accTab);
         new QListWidgetItem(charList);
         new QListWidgetItem(charList);
@@ -1159,7 +1159,7 @@ public:
         ignoreB->setText(QApplication::translate("TorTools", "Ignore", 0, QApplication::UnicodeUTF8));
         unignoreB->setText(QApplication::translate("TorTools", "Unignore", 0, QApplication::UnicodeUTF8));
         label_14->setText(QApplication::translate("TorTools", "Current Character Info", 0, QApplication::UnicodeUTF8));
-        label_15->setText(QApplication::translate("TorTools", "Information entered here will result in more accurate combat stats.", 0, QApplication::UnicodeUTF8));
+        label_15->setText(QApplication::translate("TorTools", "Information entered here may result in more accurate combat stats.", 0, QApplication::UnicodeUTF8));
 
         const bool __sortingEnabled = charList->isSortingEnabled();
         charList->setSortingEnabled(false);

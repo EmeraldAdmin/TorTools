@@ -5,6 +5,8 @@
 #include <qthread.h>
 #include <QPushButton>
 #include <QPlainTextEdit>
+#include <QFileSystemWatcher>
+#include <QStringList>
 
 namespace Ui {
 class TorTools;
@@ -65,9 +67,10 @@ public:
     FileMon();
     void run();
     bool setconnect(QPushButton *arg, TorTools *arg2);
+    QFileSystemWatcher monitor;
+    QStringList getFileList(QString arg);
 signals:
     void newDebug(QString buffer);
-    void change();
     void sendNotify(QString);
 private slots:
     void change_notify(QString arg);
