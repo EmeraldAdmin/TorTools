@@ -75,6 +75,7 @@ signals:
     void sendNotify(QString);
 private slots:
     void change_notify(QString arg);
+    void forceBufferWrite();
 };
 class sharedData{
     static QString directory;

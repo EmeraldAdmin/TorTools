@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'tortools.h'
 **
-** Created: Mon May 14 11:47:56 2012
+** Created: Mon May 14 14:10:59 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -155,7 +155,7 @@ static const uint qt_meta_data_FileMon[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -168,6 +168,7 @@ static const uint qt_meta_data_FileMon[] = {
 
  // slots: signature, parameters, type, tag, flags
       58,   54,    8,    8, 0x08,
+      81,    8,    8,    8, 0x08,
 
        0        // eod
 };
@@ -175,6 +176,7 @@ static const uint qt_meta_data_FileMon[] = {
 static const char qt_meta_stringdata_FileMon[] = {
     "FileMon\0\0buffer\0newDebug(QString)\0"
     "sendNotify(QString)\0arg\0change_notify(QString)\0"
+    "forceBufferWrite()\0"
 };
 
 void FileMon::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -186,6 +188,7 @@ void FileMon::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         case 0: _t->newDebug((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 1: _t->sendNotify((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 2: _t->change_notify((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 3: _t->forceBufferWrite(); break;
         default: ;
         }
     }
@@ -223,9 +226,9 @@ int FileMon::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }

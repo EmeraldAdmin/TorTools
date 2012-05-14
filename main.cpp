@@ -77,5 +77,9 @@ void FileMon::change_notify(QString arg){
         emit newDebug("Now watching new file "+newFiles[0]);
     }
 }
+void FileMon::forceBufferWrite(){
+    QDir trash(a.getDir());
+    QStringList b = trash.entryList();
+}
 
 

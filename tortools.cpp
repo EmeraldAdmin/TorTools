@@ -16,6 +16,7 @@ QSettings settings("EmeralDev","TorTools");
 sharedData config;
 FileMon *monitor;
 Overlay *screen;
+QTimer *buffTimer;
 QString version = "Version: 0.2.1h.WIN32.PRELAUNCH\nRelease date: 05/12/2012\n\nMore Info Available At\nhttp://emeraldev.com";
 
 /*Methods used by entire source file*/
@@ -148,13 +149,21 @@ void TorTools::on_ToggleLog_clicked()
         else {
             this->debug("Failed to connect. Not launching monitor.");
         }
+        /*Install timer to force buffer write periodically*/
+        buffTimer = new QTimer(this);
+        connect(buffTimer,SIGNAL(timeout()),monitor,SLOT(forceBufferWrite()));
+        buffTimer->start();
+        debug("Installed buffer timer.");
     }
     if (toStatus == "Turn Off Combat Logging"){
         this->debug("Toggled Off Combat Logging");
         ui->ToggleLog->setText("Turn On Combat Logging");
         delete monitor;
-        this->debug("Garbage Collected thread class.");}
+        this->debug("Garbage Collected thread class.");
+        delete buffTimer;
+        debug("Garbage collected (killed) buffer timer.");
     }
+}
 
 void TorTools::on_directory_change(QString arg){
     debug(arg, " changed");
