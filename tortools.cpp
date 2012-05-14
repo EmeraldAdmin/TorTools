@@ -72,6 +72,7 @@ TorTools::TorTools(QWidget *parent) :
             if (index != -1){
                 name = name.remove(index,50);
                 settings.beginGroup(name);
+                settings.setValue("level",ui->charLevel->text());
                 settings.endGroup();
             }
         }
