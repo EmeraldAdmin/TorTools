@@ -9,6 +9,7 @@
 #include <QStringList>
 #include <QMessageBox>
 #include <QDesktopServices>
+#include <QDebug>
 #define BTOQ(B) B ? (QString)"True" : (QString)"False"
 
 /*Global variables used in the Tor Tools class*/
@@ -21,6 +22,7 @@ QString version = "Version: 0.2.1h.WIN32.PRELAUNCH\nRelease date: 05/12/2012\n\n
 /*Methods used by entire source file*/
 void TorTools::enableOverlay(){
     screen = new Overlay();
+    QObject::connect(this,SIGNAL(updateInfoLine(QString)),screen,SLOT(updateOverlayInfo(QString)));
     screen->show();
     screen->move(settings.value("Overlay/xpos",40).toInt(),settings.value("Overlay/ypos",0).toInt());
     ui->tabs->insertTab(3,ui->overlayTab,"Overlay");
@@ -56,6 +58,24 @@ TorTools::TorTools(QWidget *parent) :
     ui->ResY->setText(QString("%1").arg(config.getResY()));
     /*Destroy overlay tab until overlay is drawn*/
     ui->tabs->removeTab(3);
+    /*Launch combat logging if auto start is enabled*/
+    if (ui->cAutoStart->isChecked()){
+        QTimer::singleShot(500,this,SLOT(on_ToggleLog_clicked()));
+    }
+    /*Attempt to auto determine characters*/
+    QDir profiles = QDir::homePath()+"/AppData/local/swtor/swtor/settings/GUIProfiles";
+    QStringList files = profiles.entryList();
+    if (!files.isEmpty()){
+        foreach(QString file,files){
+            QString name = file;
+            int index = name.indexOf(" ");
+            if (index != -1){
+                name = name.remove(index,50);
+                settings.beginGroup(name);
+                settings.endGroup();
+            }
+        }
+    }
 }
 
 TorTools::~TorTools()
@@ -71,7 +91,7 @@ TorTools::~TorTools()
 /*Class methods begin*/
 void TorTools::on_browseB_clicked()
 {
-    config.setDir(QFileDialog::getExistingDirectory(this,"Log Directory","C://Users/"));
+    config.setDir(QFileDialog::getExistingDirectory(this,"Log Directory",QDir::homePath()));
     ui->logDir->setText(config.getDir());
     settings.setValue("CombatLog/directory",config.getDir());
     debug("Changed watched directory.");
@@ -128,6 +148,9 @@ void TorTools::on_directory_change(QString arg){
     debug(arg, " changed");
     QDir dir(config.getDir());
     QStringList files = dir.entryList(QDir::Files,QDir::Time);
+    if (config.getOverlay()){
+        emit updateInfoLine("Log Change Detected");
+    }
     /*Will send file to server once server side system setup*/
 }
 

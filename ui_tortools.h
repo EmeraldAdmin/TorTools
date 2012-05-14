@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'tortools.ui'
 **
-** Created: Mon May 14 02:13:56 2012
+** Created: Mon May 14 12:01:37 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -675,8 +675,6 @@ public:
         label_15->setObjectName(QString::fromUtf8("label_15"));
         label_15->setGeometry(QRect(390, 100, 331, 31));
         charList = new QListWidget(accTab);
-        new QListWidgetItem(charList);
-        new QListWidgetItem(charList);
         charList->setObjectName(QString::fromUtf8("charList"));
         charList->setGeometry(QRect(360, 130, 101, 121));
         charLoad = new QPushButton(accTab);
@@ -706,6 +704,7 @@ public:
         buttonGroup->addButton(charDPS);
         charDPS->setObjectName(QString::fromUtf8("charDPS"));
         charDPS->setGeometry(QRect(610, 160, 41, 17));
+        charDPS->setChecked(true);
         charHealer = new QRadioButton(accTab);
         buttonGroup->addButton(charHealer);
         charHealer->setObjectName(QString::fromUtf8("charHealer"));
@@ -716,6 +715,7 @@ public:
         buttonGroup_2->addButton(SIButton);
         SIButton->setObjectName(QString::fromUtf8("SIButton"));
         SIButton->setGeometry(QRect(470, 190, 71, 17));
+        SIButton->setChecked(true);
         SWButton = new QRadioButton(accTab);
         buttonGroup_2->addButton(SWButton);
         SWButton->setObjectName(QString::fromUtf8("SWButton"));
@@ -1160,18 +1160,10 @@ public:
         unignoreB->setText(QApplication::translate("TorTools", "Unignore", 0, QApplication::UnicodeUTF8));
         label_14->setText(QApplication::translate("TorTools", "Current Character Info", 0, QApplication::UnicodeUTF8));
         label_15->setText(QApplication::translate("TorTools", "Information entered here may result in more accurate combat stats.", 0, QApplication::UnicodeUTF8));
-
-        const bool __sortingEnabled = charList->isSortingEnabled();
-        charList->setSortingEnabled(false);
-        QListWidgetItem *___qlistwidgetitem = charList->item(0);
-        ___qlistwidgetitem->setText(QApplication::translate("TorTools", "Character 1", 0, QApplication::UnicodeUTF8));
-        QListWidgetItem *___qlistwidgetitem1 = charList->item(1);
-        ___qlistwidgetitem1->setText(QApplication::translate("TorTools", "Character 2", 0, QApplication::UnicodeUTF8));
-        charList->setSortingEnabled(__sortingEnabled);
-
         charLoad->setText(QApplication::translate("TorTools", "Load", 0, QApplication::UnicodeUTF8));
         label_16->setText(QApplication::translate("TorTools", "Current Character:", 0, QApplication::UnicodeUTF8));
         label_17->setText(QApplication::translate("TorTools", "Level: ", 0, QApplication::UnicodeUTF8));
+        charLevel->setText(QApplication::translate("TorTools", "10", 0, QApplication::UnicodeUTF8));
         charTank->setText(QApplication::translate("TorTools", "Tank", 0, QApplication::UnicodeUTF8));
         charDPS->setText(QApplication::translate("TorTools", "DPS", 0, QApplication::UnicodeUTF8));
         charHealer->setText(QApplication::translate("TorTools", "Healer", 0, QApplication::UnicodeUTF8));

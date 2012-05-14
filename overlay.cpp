@@ -14,3 +14,12 @@ Overlay::~Overlay()
 {
     delete ui;
 }
+void Overlay::updateOverlayInfo(QString arg){
+    ui->overlayInfo->setText(arg);
+    this->update();
+    QTimer::singleShot(3000,this,SLOT(restoreOverlayInfo()));
+}
+void Overlay::restoreOverlayInfo(){
+    ui->overlayInfo->setText("Showing DPS");
+    this->update();
+}

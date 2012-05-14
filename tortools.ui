@@ -1339,16 +1339,6 @@ p, li { white-space: pre-wrap; }
         <height>121</height>
        </rect>
       </property>
-      <item>
-       <property name="text">
-        <string>Character 1</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Character 2</string>
-       </property>
-      </item>
      </widget>
      <widget class="QPushButton" name="charLoad">
       <property name="geometry">
@@ -1411,6 +1401,9 @@ p, li { white-space: pre-wrap; }
       <property name="inputMethodHints">
        <set>Qt::ImhDigitsOnly</set>
       </property>
+      <property name="text">
+       <string>10</string>
+      </property>
       <property name="maxLength">
        <number>2</number>
       </property>
@@ -1443,6 +1436,9 @@ p, li { white-space: pre-wrap; }
       <property name="text">
        <string>DPS</string>
       </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
       <attribute name="buttonGroup">
        <string>buttonGroup</string>
       </attribute>
@@ -1474,6 +1470,9 @@ p, li { white-space: pre-wrap; }
       </property>
       <property name="text">
        <string>Sith Inquis</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
       <attribute name="buttonGroup">
        <string>buttonGroup_2</string>

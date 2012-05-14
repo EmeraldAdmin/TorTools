@@ -26,6 +26,7 @@ public:
     void disableOverlay();
 signals:
     void closing();
+    void updateInfoLine(QString arg);
 private slots:
     void on_browseB_clicked();
 
