@@ -1,0 +1,3103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TorTools</class>
+ <widget class="QMainWindow" name="TorTools">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>751</width>
+    <height>347</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>751</width>
+    <height>347</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>751</width>
+    <height>347</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>TorTools</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabs">
+    <property name="geometry">
+     <rect>
+      <x>2</x>
+      <y>2</y>
+      <width>751</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="tabsClosable">
+     <bool>false</bool>
+    </property>
+    <property name="movable">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="mainTab">
+     <attribute name="title">
+      <string>Control</string>
+     </attribute>
+     <attribute name="toolTip">
+      <string>Settings to enable, disable and configure features.</string>
+     </attribute>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>30</y>
+        <width>741</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Combat Log Settings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>90</y>
+        <width>628</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Number of logs to keep before deletion:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="fileCounter">
+         <property name="toolTip">
+          <string>0 for unlimited</string>
+         </property>
+         <property name="maximum">
+          <number>999</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cAutoStart">
+         <property name="text">
+          <string>Start Combat Logging when TorTools starts</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="groupBool">
+         <property name="text">
+          <string>Contribute to Group stats</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>60</y>
+        <width>731</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Combat Log Directory:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="logDir"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="browseB">
+         <property name="text">
+          <string>Browse</string>
+         </property>
+         <property name="default">
+          <bool>true</bool>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>120</y>
+        <width>731</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QRadioButton" name="autoGroup">
+         <property name="text">
+          <string>Automatically Determine Group</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="manGroup">
+         <property name="text">
+          <string>Group Me With These Players:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="members">
+         <property name="text">
+          <string>List group members separated by spaces</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>150</y>
+        <width>741</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Group Finder Settings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>170</y>
+        <width>741</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select the locations for which you are looking for a group.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>190</y>
+        <width>751</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="impfps">
+       <attribute name="title">
+        <string>Empire Flashpoints</string>
+       </attribute>
+       <widget class="QCheckBox" name="checkBox">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Black Talon</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>101</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Hammer Station</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>40</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Athis</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_4">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>0</y>
+          <width>121</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Mandalorian Raiders</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_5">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>20</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cademimu</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_6">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>40</y>
+          <width>91</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Boarding Party</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_7">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>0</y>
+          <width>81</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>The Foundry</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_8">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>20</y>
+          <width>111</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Colicoid War Game</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_9">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>40</y>
+          <width>101</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>The Red Reaper</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_10">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>0</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Directive 7</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_11">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>20</y>
+          <width>91</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Battle of Ilum</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_12">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>40</y>
+          <width>91</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>False Emperor</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_13">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>0</y>
+          <width>111</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Kaon Under Siege</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_14">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>20</y>
+          <width>91</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>The Lost Island</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="pubfps">
+       <attribute name="title">
+        <string>Republic Flashpoints</string>
+       </attribute>
+       <widget class="QCheckBox" name="checkBox_15">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Esseles</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_16">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>101</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Hammer Station</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_17">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>40</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Athis</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_18">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>0</y>
+          <width>121</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Mandalorian Raiders</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_19">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>20</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cademimu</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_20">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>40</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Taral V</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_21">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>0</y>
+          <width>101</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Maelstron Prison</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_22">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>20</y>
+          <width>111</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Colicoid War Game</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_23">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>40</y>
+          <width>101</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>The Red Reaper</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_24">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>0</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Directive 7</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_25">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>20</y>
+          <width>91</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Battle of Ilum</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_26">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>40</y>
+          <width>91</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>False Emperor</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_27">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>0</y>
+          <width>111</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Kaon Under Siege</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_28">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>20</y>
+          <width>101</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>The Lost Island</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="ops">
+       <attribute name="title">
+        <string>Operations</string>
+       </attribute>
+       <widget class="QCheckBox" name="checkBox_29">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>141</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Eternity Vault Story Mode</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_30">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>161</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Karraga's Palace Story Mode</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_31">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>161</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Explosive Conflict Story Mode</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_32">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>0</y>
+          <width>141</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Eternity Vault Hardmode</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_33">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>20</y>
+          <width>151</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Karraga's Palace Hardmode</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_34">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>40</y>
+          <width>161</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Explosive Conflict Hardmode</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_35">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>0</y>
+          <width>141</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Eternity Vault Nightmare</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_36">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>20</y>
+          <width>151</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Karraga's Palace Nightmare</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="hMissions">
+       <attribute name="title">
+        <string>Heroic Missions</string>
+       </attribute>
+       <widget class="QCheckBox" name="checkBox_37">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Hutta</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_38">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Korriban</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_39">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>81</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ord Mantell</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_40">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>0</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Tython</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_41">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>20</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Coruscant</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_42">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>40</y>
+          <width>91</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Dromund Kaas</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_43">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>0</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Balmorra</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_44">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>20</y>
+          <width>81</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nar Shaddaa</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_45">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>40</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Tatooine</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_46">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>0</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Alderaan</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_47">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>20</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Taris</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_48">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>40</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Hoth</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_49">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>0</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Quesh</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_50">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>20</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Belsavis</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_51">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>40</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Voss</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_52">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>0</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Corellia</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_53">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>20</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ilum</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>0</y>
+        <width>731</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QPushButton" name="ToggleLog">
+         <property name="text">
+          <string>Turn On Combat Logging</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="overlayB">
+         <property name="text">
+          <string>Turn On Overlay</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ToggleLFG">
+         <property name="text">
+          <string>Turn On Group Finder</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>190</y>
+        <width>151</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <italic>true</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Coming Soon</string>
+      </property>
+     </widget>
+     <zorder>layoutWidget</zorder>
+     <zorder>label</zorder>
+     <zorder>layoutWidget</zorder>
+     <zorder>layoutWidget</zorder>
+     <zorder>layoutWidget</zorder>
+     <zorder>label_4</zorder>
+     <zorder>tabWidget</zorder>
+     <zorder>label_5</zorder>
+     <zorder>label_18</zorder>
+    </widget>
+    <widget class="QWidget" name="accTab">
+     <attribute name="title">
+      <string>Account</string>
+     </attribute>
+     <attribute name="toolTip">
+      <string>Setup and manage your account and characters</string>
+     </attribute>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>741</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Tor Tools Account Settings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>22</x>
+        <y>41</y>
+        <width>58</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Username</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="username">
+      <property name="geometry">
+       <rect>
+        <x>86</x>
+        <y>42</y>
+        <width>133</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>16</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>41</y>
+        <width>55</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Password</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="password">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>42</y>
+        <width>133</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>16</number>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>646</x>
+        <y>41</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Log In</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>70</y>
+        <width>741</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>If you have not registered, press Control + W to go to the website.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>90</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Ignore List</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>110</y>
+        <width>291</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ignored users will not be able to see your combat statistics.</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>120</y>
+        <width>281</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>You will not be grouped with ignored users, either.</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="ignoreList">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>140</y>
+        <width>131</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Coming Soon&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;with LFG Tool&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>150</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Character Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="charName">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>170</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>20</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ignoreB">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>200</y>
+        <width>91</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ignore</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="unignoreB">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>230</y>
+        <width>91</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Unignore</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>90</y>
+        <width>16</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>90</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Current Character Info</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>100</y>
+        <width>321</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Information entered here will result in more accurate combat stats.</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="charList">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>130</y>
+        <width>101</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Character 1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Character 2</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="charLoad">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>260</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Load</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>130</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Current Character:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="selfCharName">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>130</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>160</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Level: </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="charLevel">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>159</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhDigitsOnly</set>
+      </property>
+      <property name="maxLength">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="charTank">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>160</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tank</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string>buttonGroup</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="charDPS">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>160</y>
+        <width>41</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DPS</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string>buttonGroup</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="charHealer">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>160</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Healer</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string>buttonGroup</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="SIButton">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>190</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sith Inquis</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string>buttonGroup_2</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="SWButton">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>190</y>
+        <width>81</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sith Warrior</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string>buttonGroup_2</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="BHButton">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>190</y>
+        <width>61</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Bounty</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string>buttonGroup_2</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="IAButton">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>190</y>
+        <width>82</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Agent</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string>buttonGroup_2</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="JCButton">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>210</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Jedi Con</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string>buttonGroup_2</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="JKButton">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>210</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Jedi Knight</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string>buttonGroup_2</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="SButton">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>210</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Smuggler</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string>buttonGroup_2</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="TButton">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>210</y>
+        <width>82</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Trooper</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string>buttonGroup_2</string>
+      </attribute>
+     </widget>
+     <widget class="QPushButton" name="charSave">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_37">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>41</y>
+        <width>38</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Server</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>519</x>
+        <y>42</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Ajunta Pall</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Anchorhead</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Anturi Reach</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Assassins of Sion</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Axial Park</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Begeren Colony</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Belgoth's Beacon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Black Vulkars</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bondar Crystal</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Canderous Ordo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cho Mai</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Colonel Tobin</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Corellian Run</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Crevasse City</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Daragon Trail</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dark Reaper</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Darth Bandon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Darth Malak</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Darth Sion</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Darth Xedrix</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Davik's Estate</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Death Wind Corridor</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dreshdae Cantina</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Drooga's Pleasure Barge</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Eidolon Security</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Elysium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Empress Teta</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fa'athra</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Firaxan Shark</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Firkrann Crystal</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fort Garnik</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gardens of Talia</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gauntlet of Kressh</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Giradda the Hutt</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Grand Master Zym</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hanharr</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hedarr Soongh</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Helm of Graush</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hyperspace Cannon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ICE Breaker</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Infinite Empire</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Infinity Gate</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Iron Citadel</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Jedi Covenant</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Jung Ma</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Juyo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kaas City</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kaiburr Crystal</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kath Hound</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kathol Rift</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Keetael</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Keller's Void</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Khoonda Militia</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ki-Ta Kren</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kinrath Spider</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Krath</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Krayiss Obelisk</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Krayt Dragon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lord Adraas</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lord Ieldis</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lord Praven</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mandalore the Indomitable</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mask of Nihilus</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Master Dorak</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Master Gnost-Dural</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Master Zhar Lestin</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mind Trick</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Nadd's Sarcophagus</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Naddist Rebels</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Namadii Corridor</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Nathema</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Perlemian Trade Route</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Port Nowhere</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Prophecy of the Five</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Rakata Mind Prison</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Rubat Crystal</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Rwookrrorro</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Saber of Exar Kun</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Sanctum of the Exalted</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Sedyn Kyne</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Shadow Hand</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Shadowtown</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Shien</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Shii-Cho</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Sith Meditation Sphere</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Sith Wyrm</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Soresu</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Space Slug</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Sword of Ajunta Pall</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tarro Blood</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Telos Restoration Project</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Terentatek</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Thana Vesh</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Bastion</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Constant</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Corsair</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Courageous</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Crucible Pits</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Deadweight</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Defenestrator</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Ebon Hawk</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Fatman</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Harbinger</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Jekk'Jekk Tarr</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Maw</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Razor</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Shadowlands</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Swiftwure</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>The Twin Spears</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Thendys Noori</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Veeboo Lunx</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Veela</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ven Zallow</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vornskr</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vrook Lamar</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vulkar Highway</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Wall of Light</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Warriors of the Shadow</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Whitebeam Run</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Wound in the Force</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Zaalbar</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Zakkeg Beast</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Zez-Kai Ell</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="resultsTab">
+     <attribute name="title">
+      <string>Results</string>
+     </attribute>
+     <attribute name="toolTip">
+      <string>View combat statistics and group statistics.</string>
+     </attribute>
+     <widget class="QPushButton" name="saveHTML">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>260</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save Results</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="loadHTML">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>260</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Load Results</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="liveHTML">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>260</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Live Results</string>
+      </property>
+     </widget>
+     <widget class="QWebView" name="webView">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>751</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="url">
+       <url>
+        <string>about:blank</string>
+       </url>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="overlayTab">
+     <attribute name="title">
+      <string>Overlay</string>
+     </attribute>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>90</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Overlay Position</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QSlider" name="horizontalSlider">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>231</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sliderPosition">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="verticalSlider">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>120</y>
+        <width>19</width>
+        <height>160</height>
+       </rect>
+      </property>
+      <property name="sliderPosition">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="invertedAppearance">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>130</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Horizontal</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>190</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Vertical</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="updateOverlay">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>190</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Update</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>95</x>
+        <y>220</y>
+        <width>71</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Resolution:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="resX">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>240</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Error</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>240</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>x</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ResY">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>240</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Error</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>40</y>
+        <width>16</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>-5</x>
+        <y>10</y>
+        <width>751</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Overlay Settings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>40</y>
+        <width>221</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Detailed Section Settings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="Line" name="line_3">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>40</y>
+        <width>16</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
+       <rect>
+        <x>295</x>
+        <y>60</y>
+        <width>231</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>The detailed section has 8 lines of display</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>90</y>
+        <width>121</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use for combat stats</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_2">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>90</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use for LFG Tool</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>110</y>
+        <width>231</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Combat Stats Settings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
+       <rect>
+        <x>305</x>
+        <y>190</y>
+        <width>221</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LFG Settings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_54">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>210</y>
+        <width>201</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use every other line to show LF info</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_33">
+      <property name="geometry">
+       <rect>
+        <x>545</x>
+        <y>40</y>
+        <width>191</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Summary Section Settings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_34">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>60</y>
+        <width>211</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>The summary section has 3 lines of display</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_11">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>90</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use for combat</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_12">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>90</y>
+        <width>82</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use for LFG</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_35">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>110</y>
+        <width>201</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Combat Stats Settings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_55">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>130</y>
+        <width>141</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Overflow from detailed</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_13">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>170</y>
+        <width>41</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DPS</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_14">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>170</y>
+        <width>41</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>HPS</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_15">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>170</y>
+        <width>82</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TPS</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_36">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>150</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sort By:</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>130</y>
+        <width>185</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_28">
+         <property name="text">
+          <string>Sort by:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_3">
+         <property name="text">
+          <string>Damage Done</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_4">
+         <property name="text">
+          <string>DPS</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>230</y>
+        <width>232</width>
+        <height>43</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <property name="horizontalSpacing">
+        <number>2</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>1</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_30">
+         <property name="text">
+          <string>Without this checked, every line will show the</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_31">
+         <property name="text">
+          <string>name of a character match found. Checking it</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_32">
+         <property name="text">
+          <string>will show what they are looking for, where able.</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>150</y>
+        <width>231</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QRadioButton" name="radioButton_5">
+         <property name="text">
+          <string>Healing Done</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_6">
+         <property name="text">
+          <string>HPS</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_7">
+         <property name="text">
+          <string>Healing Rec</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>170</y>
+        <width>206</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QRadioButton" name="radioButton_8">
+         <property name="text">
+          <string>Threat </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_9">
+         <property name="text">
+          <string>Damage Taken</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_10">
+         <property name="text">
+          <string>TPS</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_38">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>271</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Combat Log Display Settings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_16">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string> Longest Fight</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_17">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>50</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Last Fight</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_18">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>50</y>
+        <width>82</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>All Fights</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_39">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>30</y>
+        <width>271</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Each Log contains multiple fights. Select what to show.</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="debugtab">
+     <attribute name="title">
+      <string>Console</string>
+     </attribute>
+     <widget class="QPlainTextEdit" name="debugWindow">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>721</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>751</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTor_Tools_Alpha">
+    <property name="title">
+     <string>Tor Tools</string>
+    </property>
+    <addaction name="actionLaunch_Overlay"/>
+    <addaction name="actionSave_Overlay_Position"/>
+    <addaction name="actionCheck_for_Updates"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuTortools_emeraldev_com">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionVersion_Info"/>
+    <addaction name="actionWebsite"/>
+    <addaction name="actionReport_a_Bug"/>
+    <addaction name="actionDocumentation"/>
+   </widget>
+   <addaction name="menuTor_Tools_Alpha"/>
+   <addaction name="menuTortools_emeraldev_com"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionVersion_Info">
+   <property name="text">
+    <string>Version Info</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionWebsite">
+   <property name="text">
+    <string>Website</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actionReport_a_Bug">
+   <property name="text">
+    <string>Report a Bug</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionCheck_for_Updates">
+   <property name="text">
+    <string>Check for Updates</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="actionLaunch_Overlay">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Enable Overlay</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave_Overlay_Position">
+   <property name="text">
+    <string>Save Overlay Position</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionDocumentation">
+   <property name="text">
+    <string>Documentation</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKit/QWebView</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup_2"/>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
+</ui>
