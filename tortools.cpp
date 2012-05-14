@@ -9,7 +9,6 @@
 #include <QStringList>
 #include <QMessageBox>
 #include <QDesktopServices>
-#include <QDebug>
 #define BTOQ(B) B ? (QString)"True" : (QString)"False"
 
 /*Global variables used in the Tor Tools class*/
@@ -71,10 +70,22 @@ TorTools::TorTools(QWidget *parent) :
             int index = name.indexOf(" ");
             if (index != -1){
                 name = name.remove(index,50);
-                settings.beginGroup(name);
-                settings.setValue("level",ui->charLevel->text());
-                settings.endGroup();
+                if (settings.value("Characters/"+name+"/status","default").toString() == "default"){
+                    settings.beginGroup("Characters");
+                    settings.beginGroup(name);
+                    settings.setValue("status","autodetect");
+                    settings.endGroup();
+                    settings.endGroup();
+                }
             }
+        }
+    }
+    /*Fill in the Character options on the account page*/
+    settings.beginGroup("Characters");
+    QStringList chars = settings.childGroups();
+    if (!chars.isEmpty()){
+        foreach(QString name,chars){
+            ui->charList->addItem(name);
         }
     }
 }
