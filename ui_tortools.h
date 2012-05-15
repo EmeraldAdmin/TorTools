@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'tortools.ui'
 **
-** Created: Mon May 14 20:19:30 2012
+** Created: Mon May 14 21:47:18 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -231,11 +231,6 @@ public:
     QRadioButton *radioButton_8;
     QRadioButton *radioButton_9;
     QRadioButton *radioButton_10;
-    QLabel *label_38;
-    QRadioButton *radioButton_16;
-    QRadioButton *radioButton_17;
-    QRadioButton *radioButton_18;
-    QLabel *label_39;
     QWidget *debugtab;
     QPlainTextEdit *debugWindow;
     QMenuBar *menuBar;
@@ -983,23 +978,6 @@ public:
 
         horizontalLayout_7->addWidget(radioButton_10);
 
-        label_38 = new QLabel(overlayTab);
-        label_38->setObjectName(QString::fromUtf8("label_38"));
-        label_38->setGeometry(QRect(0, 10, 271, 20));
-        label_38->setAlignment(Qt::AlignCenter);
-        radioButton_16 = new QRadioButton(overlayTab);
-        radioButton_16->setObjectName(QString::fromUtf8("radioButton_16"));
-        radioButton_16->setGeometry(QRect(10, 50, 111, 17));
-        radioButton_16->setChecked(true);
-        radioButton_17 = new QRadioButton(overlayTab);
-        radioButton_17->setObjectName(QString::fromUtf8("radioButton_17"));
-        radioButton_17->setGeometry(QRect(120, 50, 91, 17));
-        radioButton_18 = new QRadioButton(overlayTab);
-        radioButton_18->setObjectName(QString::fromUtf8("radioButton_18"));
-        radioButton_18->setGeometry(QRect(210, 50, 82, 17));
-        label_39 = new QLabel(overlayTab);
-        label_39->setObjectName(QString::fromUtf8("label_39"));
-        label_39->setGeometry(QRect(5, 30, 271, 20));
         tabs->addTab(overlayTab, QString());
         debugtab = new QWidget();
         debugtab->setObjectName(QString::fromUtf8("debugtab"));
@@ -1036,7 +1014,7 @@ public:
 
         retranslateUi(TorTools);
 
-        tabs->setCurrentIndex(1);
+        tabs->setCurrentIndex(3);
         tabWidget->setCurrentIndex(0);
 
 
@@ -1349,11 +1327,6 @@ public:
         radioButton_8->setText(QApplication::translate("TorTools", "Threat ", 0, QApplication::UnicodeUTF8));
         radioButton_9->setText(QApplication::translate("TorTools", "Damage Taken", 0, QApplication::UnicodeUTF8));
         radioButton_10->setText(QApplication::translate("TorTools", "TPS", 0, QApplication::UnicodeUTF8));
-        label_38->setText(QApplication::translate("TorTools", "Combat Log Display Settings", 0, QApplication::UnicodeUTF8));
-        radioButton_16->setText(QApplication::translate("TorTools", " Longest Fight", 0, QApplication::UnicodeUTF8));
-        radioButton_17->setText(QApplication::translate("TorTools", "Last Fight", 0, QApplication::UnicodeUTF8));
-        radioButton_18->setText(QApplication::translate("TorTools", "All Fights", 0, QApplication::UnicodeUTF8));
-        label_39->setText(QApplication::translate("TorTools", "Each Log contains multiple fights. Select what to show.", 0, QApplication::UnicodeUTF8));
         tabs->setTabText(tabs->indexOf(overlayTab), QApplication::translate("TorTools", "Overlay", 0, QApplication::UnicodeUTF8));
         tabs->setTabText(tabs->indexOf(debugtab), QApplication::translate("TorTools", "Console", 0, QApplication::UnicodeUTF8));
         menuTor_Tools_Alpha->setTitle(QApplication::translate("TorTools", "Tor Tools", 0, QApplication::UnicodeUTF8));

@@ -27,7 +27,6 @@ int main(int argc, char *argv[])
     b.setResX(screen.width());
     TorTools w;
     QObject::connect(&w,SIGNAL(closing()),&a,SLOT(quit()));
-    w.show();
     return a.exec();
 }
 sharedData a;

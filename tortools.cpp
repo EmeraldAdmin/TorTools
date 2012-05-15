@@ -47,6 +47,13 @@ TorTools::TorTools(QWidget *parent) :
     ui(new Ui::TorTools)
 {
     ui->setupUi(this);
+    if (settings.value("firstrun","True") == "True"){
+        settings.setValue("firstrun","false");
+        HelpWindow *help = new HelpWindow();
+        help->exec();
+        delete help;
+    }
+    this->show();
     /*load the settings from the last session, if any*/
     ui->cAutoStart->setChecked(settings.value("CombatLog/autostart","false").toBool());
     ui->groupBool->setChecked(settings.value("CombatLog/groupstats","false").toBool());

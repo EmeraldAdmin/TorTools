@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'helpwindow.ui'
 **
-** Created: Mon May 14 01:14:56 2012
+** Created: Mon May 14 22:37:49 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -15,8 +15,10 @@
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
 #include <QtGui/QHeaderView>
+#include <QtGui/QLabel>
 #include <QtGui/QLayout>
 #include <QtGui/QPlainTextEdit>
+#include <QtGui/QPushButton>
 #include <QtGui/QTextEdit>
 #include <QtGui/QToolBox>
 #include <QtGui/QWidget>
@@ -37,15 +39,17 @@ public:
     QPlainTextEdit *plainTextEdit;
     QWidget *page_5;
     QTextEdit *textEdit_4;
+    QPushButton *closeHelp;
+    QLabel *label;
 
     void setupUi(QWidget *HelpWindow)
     {
         if (HelpWindow->objectName().isEmpty())
             HelpWindow->setObjectName(QString::fromUtf8("HelpWindow"));
         HelpWindow->setWindowModality(Qt::ApplicationModal);
-        HelpWindow->resize(595, 336);
-        HelpWindow->setMinimumSize(QSize(595, 336));
-        HelpWindow->setMaximumSize(QSize(595, 336));
+        HelpWindow->resize(595, 356);
+        HelpWindow->setMinimumSize(QSize(595, 356));
+        HelpWindow->setMaximumSize(QSize(595, 356));
         helpWindow = new QToolBox(HelpWindow);
         helpWindow->setObjectName(QString::fromUtf8("helpWindow"));
         helpWindow->setGeometry(QRect(0, 0, 591, 331));
@@ -55,7 +59,7 @@ public:
         textEdit = new QTextEdit(page);
         textEdit->setObjectName(QString::fromUtf8("textEdit"));
         textEdit->setGeometry(QRect(0, 0, 591, 221));
-        helpWindow->addItem(page, QString::fromUtf8(" Overview and Features"));
+        helpWindow->addItem(page, QString::fromUtf8("Welcome"));
         page_2 = new QWidget();
         page_2->setObjectName(QString::fromUtf8("page_2"));
         page_2->setGeometry(QRect(0, 0, 591, 226));
@@ -65,26 +69,35 @@ public:
         helpWindow->addItem(page_2, QString::fromUtf8("Control Tab"));
         page_3 = new QWidget();
         page_3->setObjectName(QString::fromUtf8("page_3"));
+        page_3->setGeometry(QRect(0, 0, 591, 226));
         textEdit_3 = new QTextEdit(page_3);
         textEdit_3->setObjectName(QString::fromUtf8("textEdit_3"));
         textEdit_3->setGeometry(QRect(0, 0, 591, 221));
         helpWindow->addItem(page_3, QString::fromUtf8("Account Tab"));
         page_4 = new QWidget();
         page_4->setObjectName(QString::fromUtf8("page_4"));
+        page_4->setGeometry(QRect(0, 0, 591, 226));
         plainTextEdit = new QPlainTextEdit(page_4);
         plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
         plainTextEdit->setGeometry(QRect(0, 0, 591, 221));
         helpWindow->addItem(page_4, QString::fromUtf8("Results Tab"));
         page_5 = new QWidget();
         page_5->setObjectName(QString::fromUtf8("page_5"));
+        page_5->setGeometry(QRect(0, 0, 591, 226));
         textEdit_4 = new QTextEdit(page_5);
         textEdit_4->setObjectName(QString::fromUtf8("textEdit_4"));
         textEdit_4->setGeometry(QRect(0, 0, 591, 221));
         helpWindow->addItem(page_5, QString::fromUtf8("Overlay Tab"));
+        closeHelp = new QPushButton(HelpWindow);
+        closeHelp->setObjectName(QString::fromUtf8("closeHelp"));
+        closeHelp->setGeometry(QRect(510, 330, 75, 23));
+        label = new QLabel(HelpWindow);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(10, 330, 391, 31));
 
         retranslateUi(HelpWindow);
 
-        helpWindow->setCurrentIndex(4);
+        helpWindow->setCurrentIndex(0);
         helpWindow->layout()->setSpacing(0);
 
 
@@ -98,31 +111,34 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Tor Tools</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">Welcome to TorTools</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">This documentation will help you get started.</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">If you'd rather dive right in, just close this window.</span></p>\n"
+"<p"
+                        " align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">What is Tor Tools? </span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block"
-                        "-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Tor Tools is software to augment the game Star Wars - The Old Republic (SW:TOR or just TOR). It seeks out to do this by supplying two oft wanted features that BioWare, the developer of TOR, has yet to implement themselves: a combat statistics system, and a looking for group tool.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Tor Tools is software to augment the game Star Wars - The Old Republic (SW:TOR or just TOR). It seeks out to do this by supplying two oft wanted features that BioWare, the developer of TOR, has yet to implement themselves: a combat statistics system, and a looking for group tool.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Unlike many other MMOs, SW:TOR does not currently offer a built in API for developing game addons, or even external API support for various tasks like account validation. As a result, this program is limited by the functionality provided by BioWare.  Details on these limitations will be discussed in the appropriate context.</span></p>\n"
-""
-                        "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
+"<p style=\" "
+                        "margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Unlike many other MMOs, SW:TOR does not currently offer a built in API for developing game addons, or even external API support for various tasks like account validation. As a result, this program is limited by the functionality provided by BioWare.  Details on these limitations will be discussed in the appropriate context.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">Combat Statistics</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">TorTools has a multistep approach to determining and serving combat statistics to you. This approach starts with monitoring your filesystem for changes to the directory where TOR writes its log files. In order for log files to be successfully retreived, combat logs must be enabled in game. After logging is enabled in game, the control scheme for monitoring the directory must be set up and enabled. See the &quot;Control&quot; section for more information on this process.</span></p>\n"
-"<p sty"
-                        "le=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">The limitation that will arise here is that TOR does not write the log to file after every encounter, nor to any discernable time table. So, updates to the statistics may well lag far behind actual combat times. This is a limitation imposed by BioWare. If you want to see statistics manually, you may force the game to write to file by temporarily disabling and then reenabling combat logging in game.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">TorTools has "
+                        "a multistep approach to determining and serving combat statistics to you. This approach starts with monitoring your filesystem for changes to the directory where TOR writes its log files. In order for log files to be successfully retreived, combat logs must be enabled in game. After logging is enabled in game, the control scheme for monitoring the directory must be set up and enabled. See the &quot;Control Tab&quot; section for more information on this process.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"
-                        "\"><span style=\" font-size:10pt;\">After a change is detected, the system then sends this file to a server that processes it, and generates both a webpage, viewable in the &quot;results&quot; tab, and reply to this client, which displays in the game overlay as designated in the Overlay tab. </span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">The limitation that will arise here is that TOR does not write the log to file after every encounter, nor to any discernable time table. So, updates to the statistics may well lag far behind actual combat times. This is"
+                        " a limitation imposed by BioWare. If you want to see statistics manually, you may force the game to write to file by temporarily disabling and then reenabling combat logging in game.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">The statistics reported include DPS (damage per second), total damage done over the encounter, damage taken, threat generated over the entire encounter, threat per second, healing done over the entire encounter, healing per second, and several other statistics. If selected, you may also see statistics comparing your numbers to those of a group you are in.</span></p>\n"
-"<p style=\"-qt-par"
-                        "agraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">After a change is detected, the system then sends this file to a server that processes it, and generates both a webpage, viewable in the &quot;results&quot; tab, and reply to this client, which displays in the game overlay as designated in the Overlay tab. </span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left"
+                        ":0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">The statistics reported include DPS (damage per second), total damage done over the encounter, damage taken, threat generated over the entire encounter, threat per second, healing done over the entire encounter, healing per second, and several other statistics. If selected, you may also see statistics comparing your numbers to those of a group you are in.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">Looking For Group (LFG) Tool</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600;\"></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weigh"
+                        "t:600;\"></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">This feature is planned and coming soon. Check back for updates.</span></p></body></html>", 0, QApplication::UnicodeUTF8));
-        helpWindow->setItemText(helpWindow->indexOf(page), QApplication::translate("HelpWindow", " Overview and Features", 0, QApplication::UnicodeUTF8));
+        helpWindow->setItemText(helpWindow->indexOf(page), QApplication::translate("HelpWindow", "Welcome", 0, QApplication::UnicodeUTF8));
         textEdit_2->setHtml(QApplication::translate("HelpWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -161,7 +177,23 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">This tab is currently a layout template only. No functionality exists.</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">Account Tab</span></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">The account tab should require very few changes under normal use. Most users will have a single log in sess"
+                        "ion; once this login is complete, Tor Tools will remember it indefinitely.  </span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">The account tab serves as a place to manage less mutable or less important details, typically associated with the LFG tool. While both the LFG tool and the combat statistics portion of TorTools require a login, only LFG requires character information. Note, however, that it is possible that accurate character information may lead to faster or more accurate results in some cases.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
+"<p align=\"center\" style=\" margin-top:"
+                        "0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">Itemized Breakdown</span></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-style:italic;\">First (Primary) Line: </span><span style=\" font-size:10pt;\">The first line, with the </span><span style=\" font-size:10pt; font-style:italic;\">username</span><span style=\" font-size:10pt;\">, </span><span style=\" font-size:10pt; font-style:italic;\">password</span><span style=\" font-size:10pt;\"> and </span><span style=\" font-size:10pt; font-style:italic;\">server</span><span style=\" font-size:10pt;\"> fields are required for ALL Tor Tools services. Use"
+                        "rname and password need only be entered once. Server must only be changed when you change which server you are playing on. Note: you do not have to relog in after changing servers.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-style:italic;\">Ignore List:</span><span style=\" font-size:10pt;\"> The ignore list is for more specific managing of who can and cannot see your data or get grouped with you. Names on your ignore list will never be able to see statistics from you, even if the grouping system would normally pool you with them.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
+"<p "
+                        "style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-style:italic;\">Current Character Info:</span><span style=\" font-size:10pt;\"> The LFG tool requires you to have a current character loaded. Both the name and level fields must be properly filled out. Note: TorTools will attempt to acquire your character names each time it starts. In most cases, you will only have to modify the level, role and class fields. They will be stored for future loads. If your character does not meet the level requirements for what it is seeking a group, it will be rejected from the pool. </span></p></body></html>", 0, QApplication::UnicodeUTF8));
         helpWindow->setItemText(helpWindow->indexOf(page_3), QApplication::translate("HelpWindow", "Account Tab", 0, QApplication::UnicodeUTF8));
         plainTextEdit->setPlainText(QApplication::translate("HelpWindow", "This tab is still in development. No functionality exists yet.", 0, QApplication::UnicodeUTF8));
         helpWindow->setItemText(helpWindow->indexOf(page_4), QApplication::translate("HelpWindow", "Results Tab", 0, QApplication::UnicodeUTF8));
@@ -188,6 +220,8 @@ public:
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">The other settings of the overlay do not currently do anything. Functionality coming when server-side work "
                         "is completed.</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         helpWindow->setItemText(helpWindow->indexOf(page_5), QApplication::translate("HelpWindow", "Overlay Tab", 0, QApplication::UnicodeUTF8));
+        closeHelp->setText(QApplication::translate("HelpWindow", "Continue", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("HelpWindow", "This documentation can be viewed at any time from the Help menu.", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
