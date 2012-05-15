@@ -60,7 +60,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
     </property>
     <property name="tabsClosable">
      <bool>false</bool>
@@ -2892,6 +2892,45 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_16">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>30</y>
+        <width>131</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Show Real-Time Stats</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_17">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>50</y>
+        <width>121</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Show Delayed Stats</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_56">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>190</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Threat as percentage of tank's</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="debugtab">

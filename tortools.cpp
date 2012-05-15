@@ -9,7 +9,8 @@
 #include <QStringList>
 #include <QMessageBox>
 #include <QDesktopServices>
-#include <QDebug>
+#include <QValidator>
+#include <QRegExp>
 #define BTOQ(B) B ? (QString)"True" : (QString)"False"
 
 /*Global variables used in the Tor Tools class*/
@@ -17,7 +18,7 @@ QSettings settings("EmeralDev","TorTools");
 sharedData config;
 FileMon *monitor;
 Overlay *screen;
-QString version = "Version: 0.2.2i.WIN32.PRELAUNCH\nRelease date: 05/12/2012\n\nMore Info Available At\nhttp://emeraldev.com";
+QString version = "Version: 0.2.3b.WIN32.PRELAUNCH\nRelease date: 05/15/2012\n\nMore Info Available At\nhttp://emeraldev.com";
 
 /*Methods used by entire source file*/
 void TorTools::enableOverlay(){
@@ -107,11 +108,10 @@ TorTools::~TorTools()
     delete ui;
 }
 
-/*Class methods begin*/
+/*Class slots begin*/
 void TorTools::on_browseB_clicked()
 {
-    config.setDir(QFileDialog::getExistingDirectory(this,"Log Directory","C:\\"));
-    qDebug() << config.getDir();
+    config.setDir(QFileDialog::getExistingDirectory(this,"Log Directory",QDir::homePath()));
     ui->logDir->setText(config.getDir());
     settings.setValue("CombatLog/directory",config.getDir());
     debug("Changed watched directory.");
@@ -269,5 +269,22 @@ void TorTools::on_username_textEdited(const QString &arg1)
     int length = arg1.length() -1;
     QString temp = arg1;
     QString inchar = temp.remove(0,length);
-    debug("Username character input: "+inchar);
+    QRegExpValidator validate(QRegExp("[a-zA-Z]+([a-zA-Z0-9])*"));
+    int pos = arg1.length();
+    temp = arg1;
+    if (validate.validate(temp, pos) == QValidator::Acceptable){
+        debug("Valid character input: "+inchar);
+    }
+    else {
+        debug("Invalid character input :"+inchar);
+        ui->username->setText(temp.remove(-1,1));
+        /*Make sure the string still is valid; i.e, no more than one character was input at once.*/
+        temp = ui->username->text();
+        pos = temp.length();
+        while (validate.validate(temp, pos) == QValidator::Invalid){
+            ui->username->setText(temp.remove(-1,1));
+            temp = ui->username->text();
+            pos = temp.length();
+        }
+    }
 }

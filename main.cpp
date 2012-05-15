@@ -76,5 +76,3 @@ void FileMon::change_notify(QString arg){
         emit newDebug("Now watching new file "+newFiles[0]);
     }
 }
-
-

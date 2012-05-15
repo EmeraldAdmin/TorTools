@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'helpwindow.ui'
 **
-** Created: Mon May 14 22:37:49 2012
+** Created: Mon May 14 22:59:04 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -97,7 +97,7 @@ public:
 
         retranslateUi(HelpWindow);
 
-        helpWindow->setCurrentIndex(0);
+        helpWindow->setCurrentIndex(4);
         helpWindow->layout()->setSpacing(0);
 
 
@@ -106,7 +106,7 @@ public:
 
     void retranslateUi(QWidget *HelpWindow)
     {
-        HelpWindow->setWindowTitle(QApplication::translate("HelpWindow", "Form", 0, QApplication::UnicodeUTF8));
+        HelpWindow->setWindowTitle(QApplication::translate("HelpWindow", "Tor Tools Documentation", 0, QApplication::UnicodeUTF8));
         textEdit->setHtml(QApplication::translate("HelpWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -216,9 +216,15 @@ public:
 "<p style=\" margin-top:0px; margin-bottom:0px"
                         "; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">You can save the current position of the overlay so it opens in the same location when you restart Tor Tools. To do so, select Save Overlay Position from the Tor Tools drop down menu, or press Control+S while the Tor Tools main window (not the overlay) is selected.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-style:italic;\">Other features</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">The other settings of the overlay do not currently do anything. Functionality coming when server-side work "
-                        "is completed.</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">Configuring the Overlay's Information</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600;\"></p>\n"
+"<p style=\" margin-top:0px; margin-"
+                        "bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">The overlay can be configured to display a lot of different information sorted in different ways. It can also be configured to show real time, or delayed statistics. This time setting is for combat log exclusively. Looking for Group does not require or inquire this setting.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-style:italic;\">Real-Time Statistics</span><span style=\" font-size:10pt;\"> will poll the server roughly every 3 seconds (two global cooldowns) for piecewise information that it sums and presents until the end of combat is reached. Note that in order for other party members to be shown "
+                        "with your statistics, they must also have real time selected. Real time statistics uses significantly more system resources, and thus may reduce game performance on slower systems.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-style:italic;\">Delayed Statistics</span><span style=\" font-size:10pt;\"> is primarily selected to decrease system resource consumption, or for users who don't wish to have statistics changing on their screen during combat. Note that all party members must have delayed statistics selected to be grouped together.</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         helpWindow->setItemText(helpWindow->indexOf(page_5), QApplication::translate("HelpWindow", "Overlay Tab", 0, QApplication::UnicodeUTF8));
         closeHelp->setText(QApplication::translate("HelpWindow", "Continue", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("HelpWindow", "This documentation can be viewed at any time from the Help menu.", 0, QApplication::UnicodeUTF8));

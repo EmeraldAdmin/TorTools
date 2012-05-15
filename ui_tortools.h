@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'tortools.ui'
 **
-** Created: Mon May 14 21:47:18 2012
+** Created: Tue May 15 15:22:37 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -231,6 +231,9 @@ public:
     QRadioButton *radioButton_8;
     QRadioButton *radioButton_9;
     QRadioButton *radioButton_10;
+    QRadioButton *radioButton_16;
+    QRadioButton *radioButton_17;
+    QCheckBox *checkBox_56;
     QWidget *debugtab;
     QPlainTextEdit *debugWindow;
     QMenuBar *menuBar;
@@ -978,6 +981,15 @@ public:
 
         horizontalLayout_7->addWidget(radioButton_10);
 
+        radioButton_16 = new QRadioButton(overlayTab);
+        radioButton_16->setObjectName(QString::fromUtf8("radioButton_16"));
+        radioButton_16->setGeometry(QRect(80, 30, 131, 17));
+        radioButton_17 = new QRadioButton(overlayTab);
+        radioButton_17->setObjectName(QString::fromUtf8("radioButton_17"));
+        radioButton_17->setGeometry(QRect(80, 50, 121, 17));
+        checkBox_56 = new QCheckBox(overlayTab);
+        checkBox_56->setObjectName(QString::fromUtf8("checkBox_56"));
+        checkBox_56->setGeometry(QRect(560, 190, 181, 17));
         tabs->addTab(overlayTab, QString());
         debugtab = new QWidget();
         debugtab->setObjectName(QString::fromUtf8("debugtab"));
@@ -1014,7 +1026,7 @@ public:
 
         retranslateUi(TorTools);
 
-        tabs->setCurrentIndex(3);
+        tabs->setCurrentIndex(0);
         tabWidget->setCurrentIndex(0);
 
 
@@ -1327,6 +1339,9 @@ public:
         radioButton_8->setText(QApplication::translate("TorTools", "Threat ", 0, QApplication::UnicodeUTF8));
         radioButton_9->setText(QApplication::translate("TorTools", "Damage Taken", 0, QApplication::UnicodeUTF8));
         radioButton_10->setText(QApplication::translate("TorTools", "TPS", 0, QApplication::UnicodeUTF8));
+        radioButton_16->setText(QApplication::translate("TorTools", "Show Real-Time Stats", 0, QApplication::UnicodeUTF8));
+        radioButton_17->setText(QApplication::translate("TorTools", "Show Delayed Stats", 0, QApplication::UnicodeUTF8));
+        checkBox_56->setText(QApplication::translate("TorTools", "Threat as percentage of tank's", 0, QApplication::UnicodeUTF8));
         tabs->setTabText(tabs->indexOf(overlayTab), QApplication::translate("TorTools", "Overlay", 0, QApplication::UnicodeUTF8));
         tabs->setTabText(tabs->indexOf(debugtab), QApplication::translate("TorTools", "Console", 0, QApplication::UnicodeUTF8));
         menuTor_Tools_Alpha->setTitle(QApplication::translate("TorTools", "Tor Tools", 0, QApplication::UnicodeUTF8));

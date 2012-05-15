@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "TorTools"
-#define MyAppVersion "0.2.2i.win32.pre"
+#define MyAppVersion "0.2.3b.win32.pre"
 #define MyAppPublisher "EmeralDev"
 #define MyAppURL "http://emeraldev.com"
 #define MyAppExeName "TorTools.exe"
