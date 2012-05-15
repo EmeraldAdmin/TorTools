@@ -256,3 +256,11 @@ void TorTools::on_actionDocumentation_triggered()
     That way, memory can safely be deleted after creation.*/
     delete help;
 }
+
+void TorTools::on_username_textEdited(const QString &arg1)
+{
+    int length = arg1.length() -1;
+    QString temp = arg1;
+    QString inchar = temp.remove(0,length);
+    debug("Username character input: "+inchar);
+}

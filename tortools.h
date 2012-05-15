@@ -59,6 +59,8 @@ private slots:
 
     void on_actionDocumentation_triggered();
 
+    void on_username_textEdited(const QString &arg1);
+
 private:
     Ui::TorTools *ui;
 };
