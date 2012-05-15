@@ -60,7 +60,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <property name="tabsClosable">
      <bool>false</bool>
@@ -1101,6 +1101,9 @@
         <width>133</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
       </property>
       <property name="maxLength">
        <number>16</number>

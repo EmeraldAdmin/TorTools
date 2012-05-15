@@ -45,7 +45,7 @@ void FileMon::run(){
     monitor.addPath(a.getDir());
     QStringList files = getFileList(a.getDir());
     if (!files.isEmpty()){
-        QString fullyQ = a.getDir()+"/"+files[0];
+        QString fullyQ = a.getDir()+"\\"+files[0];
         monitor.addPath(fullyQ);
         emit newDebug("Watching most recent file: "+ fullyQ);
     }
@@ -72,14 +72,10 @@ void FileMon::change_notify(QString arg){
             monitor.removePath(old[0]);
         }
         QStringList newFiles = getFileList(a.getDir());
-        QString fullyQ = arg + "/" + newFiles[0];
+        QString fullyQ = arg + "\\" + newFiles[0];
         monitor.addPath(fullyQ);
         emit newDebug("Now watching new file "+newFiles[0]);
     }
-}
-void FileMon::forceBufferWrite(){
-    QDir trash(a.getDir());
-    QStringList b = trash.entryList();
 }
 
 

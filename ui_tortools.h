@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'tortools.ui'
 **
-** Created: Mon May 14 12:01:37 2012
+** Created: Mon May 14 15:24:15 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -618,6 +618,7 @@ public:
         username = new QLineEdit(accTab);
         username->setObjectName(QString::fromUtf8("username"));
         username->setGeometry(QRect(86, 42, 133, 20));
+        username->setInputMethodHints(Qt::ImhNone);
         username->setMaxLength(16);
         label_11 = new QLabel(accTab);
         label_11->setObjectName(QString::fromUtf8("label_11"));
@@ -1035,7 +1036,7 @@ public:
 
         retranslateUi(TorTools);
 
-        tabs->setCurrentIndex(0);
+        tabs->setCurrentIndex(1);
         tabWidget->setCurrentIndex(0);
 
 

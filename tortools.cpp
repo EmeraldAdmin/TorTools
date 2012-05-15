@@ -9,6 +9,7 @@
 #include <QStringList>
 #include <QMessageBox>
 #include <QDesktopServices>
+#include <QDebug>
 #define BTOQ(B) B ? (QString)"True" : (QString)"False"
 
 /*Global variables used in the Tor Tools class*/
@@ -16,8 +17,7 @@ QSettings settings("EmeralDev","TorTools");
 sharedData config;
 FileMon *monitor;
 Overlay *screen;
-QTimer *buffTimer;
-QString version = "Version: 0.2.1h.WIN32.PRELAUNCH\nRelease date: 05/12/2012\n\nMore Info Available At\nhttp://emeraldev.com";
+QString version = "Version: 0.2.2i.WIN32.PRELAUNCH\nRelease date: 05/12/2012\n\nMore Info Available At\nhttp://emeraldev.com";
 
 /*Methods used by entire source file*/
 void TorTools::enableOverlay(){
@@ -72,10 +72,8 @@ TorTools::TorTools(QWidget *parent) :
             if (index != -1){
                 name = name.remove(index,50);
                 if (settings.value("Characters/"+name+"/status","default").toString() == "default"){
-                    settings.beginGroup("Characters");
-                    settings.beginGroup(name);
+                    settings.beginGroup("Characters/"+name);
                     settings.setValue("status","autodetect");
-                    settings.endGroup();
                     settings.endGroup();
                 }
             }
@@ -84,6 +82,7 @@ TorTools::TorTools(QWidget *parent) :
     /*Fill in the Character options on the account page*/
     settings.beginGroup("Characters");
     QStringList chars = settings.childGroups();
+    settings.endGroup();
     if (!chars.isEmpty()){
         foreach(QString name,chars){
             ui->charList->addItem(name);
@@ -104,7 +103,8 @@ TorTools::~TorTools()
 /*Class methods begin*/
 void TorTools::on_browseB_clicked()
 {
-    config.setDir(QFileDialog::getExistingDirectory(this,"Log Directory",QDir::homePath()));
+    config.setDir(QFileDialog::getExistingDirectory(this,"Log Directory","C:\\"));
+    qDebug() << config.getDir();
     ui->logDir->setText(config.getDir());
     settings.setValue("CombatLog/directory",config.getDir());
     debug("Changed watched directory.");
@@ -149,19 +149,12 @@ void TorTools::on_ToggleLog_clicked()
         else {
             this->debug("Failed to connect. Not launching monitor.");
         }
-        /*Install timer to force buffer write periodically*/
-        buffTimer = new QTimer(this);
-        connect(buffTimer,SIGNAL(timeout()),monitor,SLOT(forceBufferWrite()));
-        buffTimer->start(5000);
-        debug("Installed buffer timer.");
     }
     if (toStatus == "Turn Off Combat Logging"){
         this->debug("Toggled Off Combat Logging");
         ui->ToggleLog->setText("Turn On Combat Logging");
         delete monitor;
         this->debug("Garbage Collected thread class.");
-        delete buffTimer;
-        debug("Garbage collected (killed) buffer timer.");
     }
 }
 

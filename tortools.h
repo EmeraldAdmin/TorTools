@@ -7,6 +7,7 @@
 #include <QPlainTextEdit>
 #include <QFileSystemWatcher>
 #include <QStringList>
+#include <QFile>
 
 namespace Ui {
 class TorTools;
@@ -75,7 +76,6 @@ signals:
     void sendNotify(QString);
 private slots:
     void change_notify(QString arg);
-    void forceBufferWrite();
 };
 class sharedData{
     static QString directory;
