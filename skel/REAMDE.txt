@@ -1,0 +1,22 @@
+TorTools v. 0.2.1.win32.prelaunch
+
+This product is incomplete, untested and still very much in development.
+TorTools.exe is published under the GNU GPL 3.0
+Other libraries are published under different licenses.
+
+As of this version, here is a rough run down of things that work
+Directory Monitoring - Whichever dir is being watched will report changes in the console.
+Save settings to registry
+Reload settings on restart
+Some, but not all, button commands
+The overlay loads, can be moved, and hidden again.
+
+Things that do not work at all:
+Actual parsing of combat data.
+Checking for updates, or anything regarding network conenctions
+The entire Account tab by the previous declaration
+The entire Results tab as well
+
+What feedback I'm looking for:
+Layout, design, etc. Also any crashes you get while using current functionality.
+If possible, copy and send debug console after crash.
