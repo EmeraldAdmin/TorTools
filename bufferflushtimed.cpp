@@ -10,10 +10,10 @@ BufferFlushTimed::~BufferFlushTimed(){
     }
 void BufferFlushTimed::run(){
     file.setFileName(dir);
-    qDebug() << file.open(QIODevice::ReadOnly);
     while (sharedData::logging){
         sleep(timeout);
+        file.open(QIODevice::ReadOnly);
         file.peek(1);
+        file.close();
     }
-    file.close();
 }

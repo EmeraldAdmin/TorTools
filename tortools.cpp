@@ -18,7 +18,7 @@ QSettings settings("EmeralDev","TorTools");
 sharedData config;
 FileMon *monitor;
 Overlay *screen;
-QString version = "Version: 0.2.3b.WIN32.PRELAUNCH\nRelease date: 05/15/2012\n\nMore Info Available At\nhttp://emeraldev.com";
+QString version = "Version: 0.3.0a.WIN32.PRELAUNCH\nRelease date: 05/15/2012\n\nMore Info Available At\nhttp://emeraldev.com";
 
 /*Methods used by entire source file*/
 void TorTools::enableOverlay(){
