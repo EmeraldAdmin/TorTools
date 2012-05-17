@@ -13,7 +13,8 @@ TEMPLATE = app
 SOURCES += main.cpp\
         tortools.cpp \
         overlay.cpp \
-    helpwindow.cpp
+    helpwindow.cpp \
+    bufferflushtimed.cpp
 
 HEADERS  += tortools.h \
     overlay.h \
@@ -22,3 +23,4 @@ HEADERS  += tortools.h \
 FORMS    += tortools.ui \
     overlay.ui \
     helpwindow.ui
+CONFIG += console

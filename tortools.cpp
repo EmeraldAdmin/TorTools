@@ -123,6 +123,7 @@ void TorTools::on_actionClose_triggered()
 }
 void TorTools::debug(QString arg){
     ui->debugWindow->appendPlainText(arg);
+    settings.setValue("LastDebug",arg);
 }
 void TorTools::onNewDebug(QString arg){
     debug(arg);
@@ -131,6 +132,7 @@ void TorTools::onNewDebug(QString arg){
 void TorTools::debug(QString arg1,QString arg2){
     QString temp = arg1 + arg2;
     ui->debugWindow->appendPlainText((temp));
+    settings.setValue("LastDebug",temp);
 }
 void TorTools::on_ToggleLog_clicked()
 {
@@ -145,23 +147,27 @@ void TorTools::on_ToggleLog_clicked()
         this->debug("Contribute to group pool: ",BTOQ(group));
         this->debug("Auto Group Find: ",BTOQ(autog));
         this->debug("Manual Group: ",BTOQ(mangr));
-        this->debug("Starting Thread...");
+        this->debug("Starting Threads...");
+        sharedData::logging = true;
         monitor = new FileMon();
         /*Set priority of monitoring thread to lower than average, allowing game more cpu time*/
         bool result = monitor->setconnect(ui->ToggleLog,this);
         if (result){
             monitor->start();
             monitor->setPriority(QThread::LowPriority);
-            this->debug("Connections Made.");}
+            this->debug("Connections Made.");
+        }
         else {
             this->debug("Failed to connect. Not launching monitor.");
         }
+
     }
     if (toStatus == "Turn Off Combat Logging"){
         this->debug("Toggled Off Combat Logging");
         ui->ToggleLog->setText("Turn On Combat Logging");
         delete monitor;
-        this->debug("Garbage Collected thread class.");
+        this->debug("Garbage Collected thread data.");
+        sharedData::logging = false;
     }
 }
 

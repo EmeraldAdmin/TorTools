@@ -8,6 +8,8 @@
 #include <QFileSystemWatcher>
 #include <QStringList>
 #include <QFile>
+#include <windows.h>
+#include <QDir>
 
 namespace Ui {
 class TorTools;
@@ -73,6 +75,7 @@ public:
     bool setconnect(QPushButton *arg, TorTools *arg2);
     QFileSystemWatcher monitor;
     QStringList getFileList(QString arg);
+    void watchFile(const QString arg);
 signals:
     void newDebug(QString buffer);
     void sendNotify(QString);
@@ -84,6 +87,7 @@ class sharedData{
     static int resX;
     static int resY;
     static bool overlay;
+    static QString flushFile;
 public:
     QString getDir();
     void setDir(QString);
@@ -93,6 +97,20 @@ public:
     void setResY(int arg);
     void setOverlay(bool);
     bool getOverlay();
+    void setFile(QString arg);
+    QString getFile();
+    static bool logging;
+};
+class BufferFlushTimed : public QThread {
+    Q_OBJECT
+public:
+    BufferFlushTimed(QObject *parent,const QString arg,long int timeout);
+    ~BufferFlushTimed();
+    void run();
+private:
+    QFile file;
+    long int timeout;
+    QString dir;
 };
 
 #endif // TORTOOLS_H
