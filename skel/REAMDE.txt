@@ -1,8 +1,8 @@
-TorTools v. 0.2.1.win32.prelaunch
+TorTools v. 0.3.0a.win32.prelaunch
 
 This product is incomplete, untested and still very much in development.
-TorTools.exe is published under the GNU GPL 3.0
-Other libraries are published under different licenses.
+TorTools.exe, and the respective source, is published under the GNU GPL 3.0
+Other libraries are published under their respective licenses.
 
 As of this version, here is a rough run down of things that work
 Directory Monitoring - Whichever dir is being watched will report changes in the console.
@@ -12,11 +12,35 @@ Some, but not all, button commands
 The overlay loads, can be moved, and hidden again.
 
 Things that do not work at all:
-Actual parsing of combat data.
-Checking for updates, or anything regarding network conenctions
-The entire Account tab by the previous declaration
-The entire Results tab as well
+Actual parsing of combat data. - This will be mostly server-side. Server still in development.
+Checking for updates, or anything regarding network connections.
+The entire Results tab is non-functional.
 
 What feedback I'm looking for:
 Layout, design, etc. Also any crashes you get while using current functionality.
 If possible, copy and send debug console after crash.
+Note, last debug message stored in registry CurrentUser>Software>EmeralDev>TorTools
+
+In-client documentation copied below.
+
+Welcome to TorTools
+This documentation will help you get started.
+If you'd rather dive right in, just close this window.
+
+What is Tor Tools? 
+Tor Tools is software to augment the game Star Wars - The Old Republic (SW:TOR or just TOR). It seeks out to do this by supplying two oft wanted features that BioWare, the developer of TOR, has yet to implement themselves: a combat statistics system, and a looking for group tool.
+
+Unlike many other MMOs, SW:TOR does not currently offer a built in API for developing game addons, or even external API support for various tasks like account validation. As a result, this program is limited by the functionality provided by BioWare.  Details on these limitations will be discussed in the appropriate context.
+
+Combat Statistics
+TorTools has a multistep approach to determining and serving combat statistics to you. This approach starts with monitoring your filesystem for changes to the directory where TOR writes its log files. In order for log files to be successfully retreived, combat logs must be enabled in game. After logging is enabled in game, the control scheme for monitoring the directory must be set up and enabled. See the "Control Tab" section for more information on this process.
+
+The limitation that will arise here is that TOR does not write the log to file after every encounter, nor to any discernable time table. So, updates to the statistics may well lag far behind actual combat times. This is a limitation imposed by BioWare. If you want to see statistics manually, you may force the game to write to file by temporarily disabling and then reenabling combat logging in game.
+
+After a change is detected, the system then sends this file to a server that processes it, and generates both a webpage, viewable in the "results" tab, and reply to this client, which displays in the game overlay as designated in the Overlay tab. 
+
+The statistics reported include DPS (damage per second), total damage done over the encounter, damage taken, threat generated over the entire encounter, threat per second, healing done over the entire encounter, healing per second, and several other statistics. If selected, you may also see statistics comparing your numbers to those of a group you are in.
+
+Looking For Group (LFG) Tool
+
+This feature is planned and coming soon. Check back for updates.
