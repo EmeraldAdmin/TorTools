@@ -10,6 +10,7 @@
 #include <QFile>
 #include <windows.h>
 #include <QDir>
+#include <QUrl>
 
 namespace Ui {
 class TorTools;
@@ -63,8 +64,11 @@ private slots:
 
     void on_username_textEdited(const QString &arg1);
 
+    void on_dockWidget_topLevelChanged(bool topLevel);
+
 private:
     Ui::TorTools *ui;
+    bool winEvent(MSG *message, long *result);
 };
 
 class FileMon : public QThread {

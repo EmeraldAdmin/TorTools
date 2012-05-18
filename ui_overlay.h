@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'overlay.ui'
 **
-** Created: Thu May 17 16:29:41 2012
+** Created: Fri May 18 14:13:07 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

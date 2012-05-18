@@ -5,8 +5,6 @@
 #include <QFileDialog>
 #include <QObject>
 #include <QSettings>
-#include <QDir>
-#include <QStringList>
 #include <QMessageBox>
 #include <QDesktopServices>
 #include <QValidator>
@@ -18,7 +16,7 @@ QSettings settings("EmeralDev","TorTools");
 sharedData config;
 FileMon *monitor;
 Overlay *screen;
-QString version = "Version: 0.3.0a.WIN32.PRELAUNCH\nRelease date: 05/15/2012\n\nMore Info Available At\nhttp://emeraldev.com";
+QString version = "Version: 0.3.1a.WIN32.PRELAUNCH\nRelease date: 05/15/2012\n\nMore Info Available At\nhttp://emeraldev.com";
 
 /*Methods used by entire source file*/
 void TorTools::enableOverlay(){
@@ -26,7 +24,7 @@ void TorTools::enableOverlay(){
     QObject::connect(this,SIGNAL(updateInfoLine(QString)),screen,SLOT(updateOverlayInfo(QString)));
     screen->show();
     screen->move(settings.value("Overlay/xpos",40).toInt(),settings.value("Overlay/ypos",0).toInt());
-    ui->tabs->insertTab(3,ui->overlayTab,"Overlay");
+    ui->tabs->insertTab(2,ui->overlayTab,"Overlay");
     config.setOverlay(true);
     debug("Overlay turned on at ",QString("%1,%2").arg(screen->x()).arg(screen->y()));
     ui->actionLaunch_Overlay->setChecked(true);
@@ -35,7 +33,7 @@ void TorTools::enableOverlay(){
 void TorTools::disableOverlay(){
     screen->hide();
     delete screen;
-    ui->tabs->removeTab(3);
+    ui->tabs->removeTab(2);
     config.setOverlay(false);
     debug("Overlay turned off.");
     ui->actionLaunch_Overlay->setChecked(false);
@@ -65,7 +63,7 @@ TorTools::TorTools(QWidget *parent) :
     ui->resX->setText(QString("%1").arg(config.getResX()));
     ui->ResY->setText(QString("%1").arg(config.getResY()));
     /*Destroy overlay tab until overlay is drawn*/
-    ui->tabs->removeTab(3);
+    ui->tabs->removeTab(2);
     /*Launch combat logging if auto start is enabled*/
     if (ui->cAutoStart->isChecked()){
         QTimer::singleShot(500,this,SLOT(on_ToggleLog_clicked()));
@@ -96,6 +94,8 @@ TorTools::TorTools(QWidget *parent) :
             ui->charList->addItem(name);
         }
     }
+    /*Register global hotkey for toggling the overlay*/
+    RegisterHotKey(this->winId(),1,MOD_CONTROL,0x4F);
 }
 
 TorTools::~TorTools()
@@ -293,4 +293,24 @@ void TorTools::on_username_textEdited(const QString &arg1)
             pos = temp.length();
         }
     }
+}
+
+void TorTools::on_dockWidget_topLevelChanged(bool topLevel)
+{
+    if (topLevel){
+        ui->dockWidget->setWindowOpacity(0.4);
+
+    }
+}
+bool TorTools::winEvent(MSG *message, long *result){
+    if (message->message == WM_HOTKEY){
+        if (config.getOverlay()){
+            disableOverlay();
+        }
+        else {
+            enableOverlay();
+        }
+        return true;
+    }
+    return false;
 }

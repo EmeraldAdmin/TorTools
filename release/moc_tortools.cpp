@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'tortools.h'
 **
-** Created: Thu May 17 16:29:51 2012
+** Created: Fri May 18 17:01:51 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_TorTools[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      18,   14, // methods
+      19,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -51,6 +51,7 @@ static const uint qt_meta_data_TorTools[] = {
      422,    9,    9,    9, 0x08,
      444,    9,    9,    9, 0x08,
      479,  186,    9,    9, 0x08,
+     520,  511,    9,    9, 0x08,
 
        0        // eod
 };
@@ -70,6 +71,7 @@ static const char qt_meta_stringdata_TorTools[] = {
     "on_overlayB_clicked()\0"
     "on_actionDocumentation_triggered()\0"
     "on_username_textEdited(QString)\0"
+    "topLevel\0on_dockWidget_topLevelChanged(bool)\0"
 };
 
 void TorTools::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -96,6 +98,7 @@ void TorTools::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 15: _t->on_overlayB_clicked(); break;
         case 16: _t->on_actionDocumentation_triggered(); break;
         case 17: _t->on_username_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 18: _t->on_dockWidget_topLevelChanged((*reinterpret_cast< bool(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -133,9 +136,9 @@ int TorTools::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 18)
+        if (_id < 19)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 19;
     }
     return _id;
 }

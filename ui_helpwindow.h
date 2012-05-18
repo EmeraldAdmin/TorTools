@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'helpwindow.ui'
 **
-** Created: Thu May 17 16:29:41 2012
+** Created: Fri May 18 14:44:46 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -17,7 +17,6 @@
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QLayout>
-#include <QtGui/QPlainTextEdit>
 #include <QtGui/QPushButton>
 #include <QtGui/QTextEdit>
 #include <QtGui/QToolBox>
@@ -35,10 +34,10 @@ public:
     QTextEdit *textEdit_2;
     QWidget *page_3;
     QTextEdit *textEdit_3;
-    QWidget *page_4;
-    QPlainTextEdit *plainTextEdit;
     QWidget *page_5;
     QTextEdit *textEdit_4;
+    QWidget *page_4;
+    QTextEdit *textEdit_5;
     QPushButton *closeHelp;
     QLabel *label;
 
@@ -62,32 +61,32 @@ public:
         helpWindow->addItem(page, QString::fromUtf8("Welcome"));
         page_2 = new QWidget();
         page_2->setObjectName(QString::fromUtf8("page_2"));
-        page_2->setGeometry(QRect(0, 0, 591, 226));
+        page_2->setGeometry(QRect(0, 0, 591, 196));
         textEdit_2 = new QTextEdit(page_2);
         textEdit_2->setObjectName(QString::fromUtf8("textEdit_2"));
         textEdit_2->setGeometry(QRect(0, 0, 591, 221));
         helpWindow->addItem(page_2, QString::fromUtf8("Control Tab"));
         page_3 = new QWidget();
         page_3->setObjectName(QString::fromUtf8("page_3"));
-        page_3->setGeometry(QRect(0, 0, 591, 226));
+        page_3->setGeometry(QRect(0, 0, 591, 196));
         textEdit_3 = new QTextEdit(page_3);
         textEdit_3->setObjectName(QString::fromUtf8("textEdit_3"));
         textEdit_3->setGeometry(QRect(0, 0, 591, 221));
         helpWindow->addItem(page_3, QString::fromUtf8("Account Tab"));
-        page_4 = new QWidget();
-        page_4->setObjectName(QString::fromUtf8("page_4"));
-        page_4->setGeometry(QRect(0, 0, 591, 226));
-        plainTextEdit = new QPlainTextEdit(page_4);
-        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
-        plainTextEdit->setGeometry(QRect(0, 0, 591, 221));
-        helpWindow->addItem(page_4, QString::fromUtf8("Results Tab"));
         page_5 = new QWidget();
         page_5->setObjectName(QString::fromUtf8("page_5"));
-        page_5->setGeometry(QRect(0, 0, 591, 226));
+        page_5->setGeometry(QRect(0, 0, 591, 196));
         textEdit_4 = new QTextEdit(page_5);
         textEdit_4->setObjectName(QString::fromUtf8("textEdit_4"));
         textEdit_4->setGeometry(QRect(0, 0, 591, 221));
         helpWindow->addItem(page_5, QString::fromUtf8("Overlay Tab"));
+        page_4 = new QWidget();
+        page_4->setObjectName(QString::fromUtf8("page_4"));
+        page_4->setGeometry(QRect(0, 0, 591, 196));
+        textEdit_5 = new QTextEdit(page_4);
+        textEdit_5->setObjectName(QString::fromUtf8("textEdit_5"));
+        textEdit_5->setGeometry(QRect(0, 0, 601, 221));
+        helpWindow->addItem(page_4, QString::fromUtf8("Results Window"));
         closeHelp = new QPushButton(HelpWindow);
         closeHelp->setObjectName(QString::fromUtf8("closeHelp"));
         closeHelp->setGeometry(QRect(510, 330, 75, 23));
@@ -97,7 +96,7 @@ public:
 
         retranslateUi(HelpWindow);
 
-        helpWindow->setCurrentIndex(4);
+        helpWindow->setCurrentIndex(0);
         helpWindow->layout()->setSpacing(0);
 
 
@@ -195,8 +194,6 @@ public:
 "<p "
                         "style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-style:italic;\">Current Character Info:</span><span style=\" font-size:10pt;\"> The LFG tool requires you to have a current character loaded. Both the name and level fields must be properly filled out. Note: TorTools will attempt to acquire your character names each time it starts. In most cases, you will only have to modify the level, role and class fields. They will be stored for future loads. If your character does not meet the level requirements for what it is seeking a group, it will be rejected from the pool. </span></p></body></html>", 0, QApplication::UnicodeUTF8));
         helpWindow->setItemText(helpWindow->indexOf(page_3), QApplication::translate("HelpWindow", "Account Tab", 0, QApplication::UnicodeUTF8));
-        plainTextEdit->setPlainText(QApplication::translate("HelpWindow", "This tab is still in development. No functionality exists yet.", 0, QApplication::UnicodeUTF8));
-        helpWindow->setItemText(helpWindow->indexOf(page_4), QApplication::translate("HelpWindow", "Results Tab", 0, QApplication::UnicodeUTF8));
         textEdit_4->setHtml(QApplication::translate("HelpWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -226,6 +223,22 @@ public:
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-style:italic;\">Delayed Statistics</span><span style=\" font-size:10pt;\"> is primarily selected to decrease system resource consumption, or for users who don't wish to have statistics changing on their screen during combat. Note that all party members must have delayed statistics selected to be grouped together.</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         helpWindow->setItemText(helpWindow->indexOf(page_5), QApplication::translate("HelpWindow", "Overlay Tab", 0, QApplication::UnicodeUTF8));
+        textEdit_5->setHtml(QApplication::translate("HelpWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; font-weight:600;\">Results</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Overview</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Tor Tools' results are actually a rendered web page that is created every time combat completes. The only live results th"
+                        "at will be displayed are available via the Overlay (see Overlay tab.)</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">The results window can be undocked from the main window. If this happens, it will become semi-transparent, just like the overlay, and stick on top of other windows. This enables the full results of combat to be seen and managed without having to minimize the game. </span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">The undoc"
+                        "ked window can be moved to any desired position. You can also configure it to autohide (redock) itself when combat commences. When combat is complete, it will show once more on your screen.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Only one page is saved on the server per user. This means that new combat data will overwrite old. If you want to back up data to be viewed in more detail later, you can click the &quot;Save Results&quot; button, and select the folder to save it to. In similar fashion, old results can be loaded. To return to seeing live streaming results, click the &quot;Live Results&quot; button.</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        helpWindow->setItemText(helpWindow->indexOf(page_4), QApplication::translate("HelpWindow", "Results Window", 0, QApplication::UnicodeUTF8));
         closeHelp->setText(QApplication::translate("HelpWindow", "Continue", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("HelpWindow", "This documentation can be viewed at any time from the Help menu.", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

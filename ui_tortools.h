@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'tortools.ui'
 **
-** Created: Thu May 17 16:29:41 2012
+** Created: Fri May 18 16:34:38 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -16,6 +16,7 @@
 #include <QtGui/QButtonGroup>
 #include <QtGui/QCheckBox>
 #include <QtGui/QComboBox>
+#include <QtGui/QDockWidget>
 #include <QtGui/QFormLayout>
 #include <QtGui/QFrame>
 #include <QtGui/QHBoxLayout>
@@ -55,17 +56,6 @@ public:
     QWidget *mainTab;
     QLabel *label;
     QWidget *layoutWidget;
-    QHBoxLayout *horizontalLayout_2;
-    QLabel *label_3;
-    QSpinBox *fileCounter;
-    QCheckBox *cAutoStart;
-    QCheckBox *groupBool;
-    QWidget *layoutWidget1;
-    QHBoxLayout *horizontalLayout;
-    QLabel *label_2;
-    QLineEdit *logDir;
-    QPushButton *browseB;
-    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_3;
     QRadioButton *autoGroup;
     QRadioButton *manGroup;
@@ -130,12 +120,29 @@ public:
     QCheckBox *checkBox_51;
     QCheckBox *checkBox_52;
     QCheckBox *checkBox_53;
-    QWidget *layoutWidget3;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_4;
     QPushButton *ToggleLog;
     QPushButton *overlayB;
     QPushButton *ToggleLFG;
     QLabel *label_18;
+    QCheckBox *checkBox_58;
+    QWidget *layoutWidget2;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_3;
+    QSpinBox *fileCounter;
+    QCheckBox *cAutoStart;
+    QCheckBox *groupBool;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label_2;
+    QLineEdit *logDir;
+    QPushButton *browseB;
+    QWidget *widget1;
+    QHBoxLayout *horizontalLayout_7;
+    QCheckBox *hmToggle;
+    QLabel *label_38;
+    QLineEdit *lfgComment;
     QWidget *accTab;
     QLabel *label_9;
     QLabel *label_10;
@@ -175,11 +182,6 @@ public:
     QPushButton *charSave;
     QLabel *label_37;
     QComboBox *comboBox;
-    QWidget *resultsTab;
-    QPushButton *saveHTML;
-    QPushButton *loadHTML;
-    QPushButton *liveHTML;
-    QWebView *webView;
     QWidget *overlayTab;
     QLabel *label_19;
     QSlider *horizontalSlider;
@@ -188,9 +190,6 @@ public:
     QLabel *label_21;
     QPushButton *updateOverlay;
     QLabel *label_22;
-    QLabel *resX;
-    QLabel *label_23;
-    QLabel *ResY;
     QFrame *line_2;
     QLabel *label_24;
     QLabel *label_25;
@@ -211,35 +210,48 @@ public:
     QRadioButton *radioButton_14;
     QRadioButton *radioButton_15;
     QLabel *label_36;
-    QWidget *layoutWidget4;
-    QHBoxLayout *horizontalLayout_5;
-    QLabel *label_28;
-    QRadioButton *radioButton_3;
-    QRadioButton *radioButton_4;
-    QWidget *layoutWidget5;
+    QWidget *layoutWidget3;
     QFormLayout *formLayout;
     QLabel *label_30;
     QLabel *label_31;
     QLabel *label_32;
-    QWidget *layoutWidget6;
-    QHBoxLayout *horizontalLayout_6;
-    QRadioButton *radioButton_5;
-    QRadioButton *radioButton_6;
-    QRadioButton *radioButton_7;
-    QWidget *layoutWidget7;
-    QHBoxLayout *horizontalLayout_7;
-    QRadioButton *radioButton_8;
-    QRadioButton *radioButton_9;
-    QRadioButton *radioButton_10;
     QRadioButton *radioButton_16;
     QRadioButton *radioButton_17;
     QCheckBox *checkBox_56;
+    QRadioButton *radioButton_18;
+    QRadioButton *radioButton_19;
+    QRadioButton *radioButton_20;
+    QCheckBox *checkBox_57;
+    QRadioButton *radioButton_3;
+    QRadioButton *radioButton_4;
+    QLabel *label_28;
+    QRadioButton *radioButton_5;
+    QRadioButton *radioButton_7;
+    QRadioButton *radioButton_6;
+    QRadioButton *radioButton_10;
+    QRadioButton *radioButton_8;
+    QRadioButton *radioButton_9;
+    QWidget *layoutWidget4;
+    QHBoxLayout *horizontalLayout_5;
+    QLabel *resX;
+    QLabel *label_23;
+    QLabel *ResY;
     QWidget *debugtab;
     QPlainTextEdit *debugWindow;
+    QWidget *widget2;
+    QHBoxLayout *horizontalLayout_6;
+    QCheckBox *resultsAutoHide_2;
+    QPushButton *resultsLive_2;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_3;
+    QLabel *label_39;
     QMenuBar *menuBar;
     QMenu *menuTor_Tools_Alpha;
     QMenu *menuTortools_emeraldev_com;
     QStatusBar *statusBar;
+    QDockWidget *dockWidget;
+    QWidget *dockWidgetContents_16;
+    QWebView *webView;
     QButtonGroup *buttonGroup_2;
     QButtonGroup *buttonGroup;
 
@@ -248,14 +260,14 @@ public:
         if (TorTools->objectName().isEmpty())
             TorTools->setObjectName(QString::fromUtf8("TorTools"));
         TorTools->setWindowModality(Qt::WindowModal);
-        TorTools->resize(751, 347);
+        TorTools->resize(751, 730);
         QSizePolicy sizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(TorTools->sizePolicy().hasHeightForWidth());
         TorTools->setSizePolicy(sizePolicy);
-        TorTools->setMinimumSize(QSize(751, 347));
-        TorTools->setMaximumSize(QSize(751, 347));
+        TorTools->setMinimumSize(QSize(751, 365));
+        TorTools->setMaximumSize(QSize(751, 730));
         TorTools->setAutoFillBackground(true);
         TorTools->setAnimated(true);
         TorTools->setTabShape(QTabWidget::Rounded);
@@ -280,7 +292,7 @@ public:
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         tabs = new QTabWidget(centralWidget);
         tabs->setObjectName(QString::fromUtf8("tabs"));
-        tabs->setGeometry(QRect(2, 2, 751, 331));
+        tabs->setGeometry(QRect(2, 2, 751, 321));
         tabs->setAutoFillBackground(true);
         tabs->setTabsClosable(false);
         tabs->setMovable(false);
@@ -297,95 +309,40 @@ public:
         label->setAlignment(Qt::AlignCenter);
         layoutWidget = new QWidget(mainTab);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(60, 90, 628, 22));
-        horizontalLayout_2 = new QHBoxLayout(layoutWidget);
-        horizontalLayout_2->setSpacing(6);
-        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_3 = new QLabel(layoutWidget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-
-        horizontalLayout_2->addWidget(label_3);
-
-        fileCounter = new QSpinBox(layoutWidget);
-        fileCounter->setObjectName(QString::fromUtf8("fileCounter"));
-        fileCounter->setMaximum(999);
-
-        horizontalLayout_2->addWidget(fileCounter);
-
-        cAutoStart = new QCheckBox(layoutWidget);
-        cAutoStart->setObjectName(QString::fromUtf8("cAutoStart"));
-        cAutoStart->setChecked(true);
-
-        horizontalLayout_2->addWidget(cAutoStart);
-
-        groupBool = new QCheckBox(layoutWidget);
-        groupBool->setObjectName(QString::fromUtf8("groupBool"));
-
-        horizontalLayout_2->addWidget(groupBool);
-
-        layoutWidget1 = new QWidget(mainTab);
-        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(9, 60, 731, 25));
-        horizontalLayout = new QHBoxLayout(layoutWidget1);
-        horizontalLayout->setSpacing(6);
-        horizontalLayout->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        label_2 = new QLabel(layoutWidget1);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-
-        horizontalLayout->addWidget(label_2);
-
-        logDir = new QLineEdit(layoutWidget1);
-        logDir->setObjectName(QString::fromUtf8("logDir"));
-
-        horizontalLayout->addWidget(logDir);
-
-        browseB = new QPushButton(layoutWidget1);
-        browseB->setObjectName(QString::fromUtf8("browseB"));
-        browseB->setDefault(true);
-        browseB->setFlat(false);
-
-        horizontalLayout->addWidget(browseB);
-
-        layoutWidget2 = new QWidget(mainTab);
-        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(9, 120, 731, 22));
-        horizontalLayout_3 = new QHBoxLayout(layoutWidget2);
+        layoutWidget->setGeometry(QRect(9, 120, 731, 22));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget);
         horizontalLayout_3->setSpacing(6);
         horizontalLayout_3->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        autoGroup = new QRadioButton(layoutWidget2);
+        autoGroup = new QRadioButton(layoutWidget);
         autoGroup->setObjectName(QString::fromUtf8("autoGroup"));
 
         horizontalLayout_3->addWidget(autoGroup);
 
-        manGroup = new QRadioButton(layoutWidget2);
+        manGroup = new QRadioButton(layoutWidget);
         manGroup->setObjectName(QString::fromUtf8("manGroup"));
 
         horizontalLayout_3->addWidget(manGroup);
 
-        members = new QLineEdit(layoutWidget2);
+        members = new QLineEdit(layoutWidget);
         members->setObjectName(QString::fromUtf8("members"));
 
         horizontalLayout_3->addWidget(members);
 
         label_4 = new QLabel(mainTab);
         label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(0, 150, 741, 20));
+        label_4->setGeometry(QRect(0, 139, 741, 31));
         label_4->setFont(font);
         label_4->setAlignment(Qt::AlignCenter);
         label_5 = new QLabel(mainTab);
         label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(0, 170, 741, 20));
+        label_5->setGeometry(QRect(0, 160, 741, 20));
         label_5->setAlignment(Qt::AlignCenter);
         tabWidget = new QTabWidget(mainTab);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tabWidget->setEnabled(true);
-        tabWidget->setGeometry(QRect(0, 190, 751, 91));
+        tabWidget->setGeometry(QRect(0, 180, 751, 91));
         tabWidget->setTabsClosable(false);
         tabWidget->setMovable(true);
         impfps = new QWidget();
@@ -433,6 +390,20 @@ public:
         checkBox_14->setObjectName(QString::fromUtf8("checkBox_14"));
         checkBox_14->setGeometry(QRect(460, 20, 91, 17));
         tabWidget->addTab(impfps, QString());
+        checkBox->raise();
+        checkBox_2->raise();
+        checkBox_3->raise();
+        checkBox_4->raise();
+        checkBox_5->raise();
+        checkBox_6->raise();
+        checkBox_7->raise();
+        checkBox_8->raise();
+        checkBox_9->raise();
+        checkBox_10->raise();
+        checkBox_11->raise();
+        checkBox_12->raise();
+        checkBox_13->raise();
+        checkBox_14->raise();
         pubfps = new QWidget();
         pubfps->setObjectName(QString::fromUtf8("pubfps"));
         checkBox_15 = new QCheckBox(pubfps);
@@ -559,37 +530,118 @@ public:
         checkBox_53->setObjectName(QString::fromUtf8("checkBox_53"));
         checkBox_53->setGeometry(QRect(470, 20, 70, 17));
         tabWidget->addTab(hMissions, QString());
-        layoutWidget3 = new QWidget(mainTab);
-        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
-        layoutWidget3->setGeometry(QRect(9, 0, 731, 31));
-        horizontalLayout_4 = new QHBoxLayout(layoutWidget3);
+        layoutWidget1 = new QWidget(mainTab);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(9, 0, 731, 31));
+        horizontalLayout_4 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_4->setSpacing(6);
         horizontalLayout_4->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
-        ToggleLog = new QPushButton(layoutWidget3);
+        ToggleLog = new QPushButton(layoutWidget1);
         ToggleLog->setObjectName(QString::fromUtf8("ToggleLog"));
 
         horizontalLayout_4->addWidget(ToggleLog);
 
-        overlayB = new QPushButton(layoutWidget3);
+        overlayB = new QPushButton(layoutWidget1);
         overlayB->setObjectName(QString::fromUtf8("overlayB"));
 
         horizontalLayout_4->addWidget(overlayB);
 
-        ToggleLFG = new QPushButton(layoutWidget3);
+        ToggleLFG = new QPushButton(layoutWidget1);
         ToggleLFG->setObjectName(QString::fromUtf8("ToggleLFG"));
 
         horizontalLayout_4->addWidget(ToggleLFG);
 
         label_18 = new QLabel(mainTab);
         label_18->setObjectName(QString::fromUtf8("label_18"));
-        label_18->setGeometry(QRect(430, 190, 151, 16));
+        label_18->setGeometry(QRect(430, 180, 151, 16));
         QFont font1;
         font1.setBold(true);
         font1.setItalic(true);
         font1.setWeight(75);
         label_18->setFont(font1);
+        checkBox_58 = new QCheckBox(mainTab);
+        checkBox_58->setObjectName(QString::fromUtf8("checkBox_58"));
+        checkBox_58->setGeometry(QRect(530, 180, 211, 17));
+        layoutWidget2 = new QWidget(mainTab);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(30, 90, 670, 22));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget2);
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        label_3 = new QLabel(layoutWidget2);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        horizontalLayout_2->addWidget(label_3);
+
+        fileCounter = new QSpinBox(layoutWidget2);
+        fileCounter->setObjectName(QString::fromUtf8("fileCounter"));
+        fileCounter->setMaximum(999);
+
+        horizontalLayout_2->addWidget(fileCounter);
+
+        cAutoStart = new QCheckBox(layoutWidget2);
+        cAutoStart->setObjectName(QString::fromUtf8("cAutoStart"));
+        cAutoStart->setChecked(true);
+
+        horizontalLayout_2->addWidget(cAutoStart);
+
+        groupBool = new QCheckBox(layoutWidget2);
+        groupBool->setObjectName(QString::fromUtf8("groupBool"));
+
+        horizontalLayout_2->addWidget(groupBool);
+
+        widget = new QWidget(mainTab);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(10, 50, 731, 25));
+        horizontalLayout = new QHBoxLayout(widget);
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        label_2 = new QLabel(widget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        horizontalLayout->addWidget(label_2);
+
+        logDir = new QLineEdit(widget);
+        logDir->setObjectName(QString::fromUtf8("logDir"));
+
+        horizontalLayout->addWidget(logDir);
+
+        browseB = new QPushButton(widget);
+        browseB->setObjectName(QString::fromUtf8("browseB"));
+        browseB->setDefault(true);
+        browseB->setFlat(false);
+
+        horizontalLayout->addWidget(browseB);
+
+        widget1 = new QWidget(mainTab);
+        widget1->setObjectName(QString::fromUtf8("widget1"));
+        widget1->setGeometry(QRect(10, 270, 721, 22));
+        horizontalLayout_7 = new QHBoxLayout(widget1);
+        horizontalLayout_7->setSpacing(6);
+        horizontalLayout_7->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
+        horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
+        hmToggle = new QCheckBox(widget1);
+        hmToggle->setObjectName(QString::fromUtf8("hmToggle"));
+
+        horizontalLayout_7->addWidget(hmToggle);
+
+        label_38 = new QLabel(widget1);
+        label_38->setObjectName(QString::fromUtf8("label_38"));
+
+        horizontalLayout_7->addWidget(label_38);
+
+        lfgComment = new QLineEdit(widget1);
+        lfgComment->setObjectName(QString::fromUtf8("lfgComment"));
+
+        horizontalLayout_7->addWidget(lfgComment);
+
         tabs->addTab(mainTab, QString());
         layoutWidget->raise();
         label->raise();
@@ -600,6 +652,10 @@ public:
         tabWidget->raise();
         label_5->raise();
         label_18->raise();
+        checkBox_58->raise();
+        hmToggle->raise();
+        label_38->raise();
+        lfgComment->raise();
         accTab = new QWidget();
         accTab->setObjectName(QString::fromUtf8("accTab"));
         label_9 = new QLabel(accTab);
@@ -663,7 +719,7 @@ public:
         unignoreB->setGeometry(QRect(200, 230, 91, 23));
         line = new QFrame(accTab);
         line->setObjectName(QString::fromUtf8("line"));
-        line->setGeometry(QRect(340, 90, 16, 201));
+        line->setGeometry(QRect(330, 90, 16, 201));
         line->setFrameShape(QFrame::VLine);
         line->setFrameShadow(QFrame::Sunken);
         label_14 = new QLabel(accTab);
@@ -675,10 +731,10 @@ public:
         label_15->setGeometry(QRect(390, 100, 331, 31));
         charList = new QListWidget(accTab);
         charList->setObjectName(QString::fromUtf8("charList"));
-        charList->setGeometry(QRect(360, 130, 101, 121));
+        charList->setGeometry(QRect(350, 130, 101, 121));
         charLoad = new QPushButton(accTab);
         charLoad->setObjectName(QString::fromUtf8("charLoad"));
-        charLoad->setGeometry(QRect(370, 260, 81, 23));
+        charLoad->setGeometry(QRect(360, 260, 81, 23));
         label_16 = new QLabel(accTab);
         label_16->setObjectName(QString::fromUtf8("label_16"));
         label_16->setGeometry(QRect(490, 130, 91, 16));
@@ -713,36 +769,36 @@ public:
         buttonGroup_2->setObjectName(QString::fromUtf8("buttonGroup_2"));
         buttonGroup_2->addButton(SIButton);
         SIButton->setObjectName(QString::fromUtf8("SIButton"));
-        SIButton->setGeometry(QRect(470, 190, 71, 17));
+        SIButton->setGeometry(QRect(460, 190, 71, 17));
         SIButton->setChecked(true);
         SWButton = new QRadioButton(accTab);
         buttonGroup_2->addButton(SWButton);
         SWButton->setObjectName(QString::fromUtf8("SWButton"));
-        SWButton->setGeometry(QRect(540, 190, 81, 17));
+        SWButton->setGeometry(QRect(530, 190, 81, 17));
         BHButton = new QRadioButton(accTab);
         buttonGroup_2->addButton(BHButton);
         BHButton->setObjectName(QString::fromUtf8("BHButton"));
-        BHButton->setGeometry(QRect(620, 190, 61, 17));
+        BHButton->setGeometry(QRect(610, 190, 61, 17));
         IAButton = new QRadioButton(accTab);
         buttonGroup_2->addButton(IAButton);
         IAButton->setObjectName(QString::fromUtf8("IAButton"));
-        IAButton->setGeometry(QRect(690, 190, 82, 17));
+        IAButton->setGeometry(QRect(680, 190, 82, 17));
         JCButton = new QRadioButton(accTab);
         buttonGroup_2->addButton(JCButton);
         JCButton->setObjectName(QString::fromUtf8("JCButton"));
-        JCButton->setGeometry(QRect(470, 210, 71, 17));
+        JCButton->setGeometry(QRect(460, 210, 71, 17));
         JKButton = new QRadioButton(accTab);
         buttonGroup_2->addButton(JKButton);
         JKButton->setObjectName(QString::fromUtf8("JKButton"));
-        JKButton->setGeometry(QRect(540, 210, 71, 17));
+        JKButton->setGeometry(QRect(530, 210, 71, 17));
         SButton = new QRadioButton(accTab);
         buttonGroup_2->addButton(SButton);
         SButton->setObjectName(QString::fromUtf8("SButton"));
-        SButton->setGeometry(QRect(620, 210, 71, 17));
+        SButton->setGeometry(QRect(610, 210, 71, 17));
         TButton = new QRadioButton(accTab);
         buttonGroup_2->addButton(TButton);
         TButton->setObjectName(QString::fromUtf8("TButton"));
-        TButton->setGeometry(QRect(690, 210, 82, 17));
+        TButton->setGeometry(QRect(680, 210, 82, 17));
         charSave = new QPushButton(accTab);
         charSave->setObjectName(QString::fromUtf8("charSave"));
         charSave->setGeometry(QRect(560, 240, 75, 23));
@@ -754,22 +810,6 @@ public:
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(519, 42, 121, 20));
         tabs->addTab(accTab, QString());
-        resultsTab = new QWidget();
-        resultsTab->setObjectName(QString::fromUtf8("resultsTab"));
-        saveHTML = new QPushButton(resultsTab);
-        saveHTML->setObjectName(QString::fromUtf8("saveHTML"));
-        saveHTML->setGeometry(QRect(0, 260, 75, 23));
-        loadHTML = new QPushButton(resultsTab);
-        loadHTML->setObjectName(QString::fromUtf8("loadHTML"));
-        loadHTML->setGeometry(QRect(80, 260, 75, 23));
-        liveHTML = new QPushButton(resultsTab);
-        liveHTML->setObjectName(QString::fromUtf8("liveHTML"));
-        liveHTML->setGeometry(QRect(160, 260, 75, 23));
-        webView = new QWebView(resultsTab);
-        webView->setObjectName(QString::fromUtf8("webView"));
-        webView->setGeometry(QRect(0, 0, 751, 261));
-        webView->setUrl(QUrl(QString::fromUtf8("about:blank")));
-        tabs->addTab(resultsTab, QString());
         overlayTab = new QWidget();
         overlayTab->setObjectName(QString::fromUtf8("overlayTab"));
         label_19 = new QLabel(overlayTab);
@@ -778,12 +818,12 @@ public:
         label_19->setAlignment(Qt::AlignCenter);
         horizontalSlider = new QSlider(overlayTab);
         horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
-        horizontalSlider->setGeometry(QRect(20, 110, 231, 19));
+        horizontalSlider->setGeometry(QRect(10, 110, 231, 19));
         horizontalSlider->setSliderPosition(50);
         horizontalSlider->setOrientation(Qt::Horizontal);
         verticalSlider = new QSlider(overlayTab);
         verticalSlider->setObjectName(QString::fromUtf8("verticalSlider"));
-        verticalSlider->setGeometry(QRect(240, 120, 19, 160));
+        verticalSlider->setGeometry(QRect(230, 120, 19, 160));
         verticalSlider->setSliderPosition(50);
         verticalSlider->setOrientation(Qt::Vertical);
         verticalSlider->setInvertedAppearance(true);
@@ -792,27 +832,17 @@ public:
         label_20->setGeometry(QRect(110, 130, 51, 16));
         label_21 = new QLabel(overlayTab);
         label_21->setObjectName(QString::fromUtf8("label_21"));
-        label_21->setGeometry(QRect(200, 190, 46, 13));
+        label_21->setGeometry(QRect(190, 190, 46, 13));
         updateOverlay = new QPushButton(overlayTab);
         updateOverlay->setObjectName(QString::fromUtf8("updateOverlay"));
-        updateOverlay->setGeometry(QRect(90, 190, 75, 23));
+        updateOverlay->setGeometry(QRect(70, 170, 91, 23));
         label_22 = new QLabel(overlayTab);
         label_22->setObjectName(QString::fromUtf8("label_22"));
-        label_22->setGeometry(QRect(95, 220, 71, 20));
+        label_22->setGeometry(QRect(80, 200, 71, 20));
         label_22->setAlignment(Qt::AlignCenter);
-        resX = new QLabel(overlayTab);
-        resX->setObjectName(QString::fromUtf8("resX"));
-        resX->setGeometry(QRect(90, 240, 46, 13));
-        label_23 = new QLabel(overlayTab);
-        label_23->setObjectName(QString::fromUtf8("label_23"));
-        label_23->setGeometry(QRect(120, 240, 16, 16));
-        label_23->setAlignment(Qt::AlignCenter);
-        ResY = new QLabel(overlayTab);
-        ResY->setObjectName(QString::fromUtf8("ResY"));
-        ResY->setGeometry(QRect(140, 240, 46, 13));
         line_2 = new QFrame(overlayTab);
         line_2->setObjectName(QString::fromUtf8("line_2"));
-        line_2->setGeometry(QRect(280, 40, 16, 241));
+        line_2->setGeometry(QRect(260, 40, 16, 241));
         line_2->setFrameShape(QFrame::VLine);
         line_2->setFrameShadow(QFrame::Sunken);
         label_24 = new QLabel(overlayTab);
@@ -826,170 +856,166 @@ public:
         label_24->setAlignment(Qt::AlignCenter);
         label_25 = new QLabel(overlayTab);
         label_25->setObjectName(QString::fromUtf8("label_25"));
-        label_25->setGeometry(QRect(300, 40, 221, 20));
+        label_25->setGeometry(QRect(280, 40, 221, 20));
         label_25->setAlignment(Qt::AlignCenter);
         line_3 = new QFrame(overlayTab);
         line_3->setObjectName(QString::fromUtf8("line_3"));
-        line_3->setGeometry(QRect(530, 40, 16, 241));
+        line_3->setGeometry(QRect(510, 40, 16, 241));
         line_3->setFrameShape(QFrame::VLine);
         line_3->setFrameShadow(QFrame::Sunken);
         label_26 = new QLabel(overlayTab);
         label_26->setObjectName(QString::fromUtf8("label_26"));
-        label_26->setGeometry(QRect(295, 60, 231, 20));
+        label_26->setGeometry(QRect(280, 60, 231, 20));
         radioButton = new QRadioButton(overlayTab);
         radioButton->setObjectName(QString::fromUtf8("radioButton"));
-        radioButton->setGeometry(QRect(300, 90, 121, 17));
+        radioButton->setGeometry(QRect(280, 80, 121, 17));
         radioButton->setChecked(false);
         radioButton_2 = new QRadioButton(overlayTab);
         radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
-        radioButton_2->setGeometry(QRect(430, 90, 101, 17));
+        radioButton_2->setGeometry(QRect(410, 80, 101, 17));
         label_27 = new QLabel(overlayTab);
         label_27->setObjectName(QString::fromUtf8("label_27"));
-        label_27->setGeometry(QRect(300, 110, 231, 20));
+        label_27->setGeometry(QRect(280, 100, 231, 20));
         label_27->setAlignment(Qt::AlignCenter);
         label_29 = new QLabel(overlayTab);
         label_29->setObjectName(QString::fromUtf8("label_29"));
-        label_29->setGeometry(QRect(305, 190, 221, 20));
+        label_29->setGeometry(QRect(280, 190, 221, 31));
         label_29->setAlignment(Qt::AlignCenter);
         checkBox_54 = new QCheckBox(overlayTab);
         checkBox_54->setObjectName(QString::fromUtf8("checkBox_54"));
-        checkBox_54->setGeometry(QRect(300, 210, 201, 17));
+        checkBox_54->setGeometry(QRect(290, 210, 201, 17));
         label_33 = new QLabel(overlayTab);
         label_33->setObjectName(QString::fromUtf8("label_33"));
-        label_33->setGeometry(QRect(545, 40, 191, 20));
+        label_33->setGeometry(QRect(540, 40, 191, 20));
         label_33->setAlignment(Qt::AlignCenter);
         label_34 = new QLabel(overlayTab);
         label_34->setObjectName(QString::fromUtf8("label_34"));
-        label_34->setGeometry(QRect(540, 60, 211, 16));
+        label_34->setGeometry(QRect(530, 60, 211, 16));
         radioButton_11 = new QRadioButton(overlayTab);
         radioButton_11->setObjectName(QString::fromUtf8("radioButton_11"));
-        radioButton_11->setGeometry(QRect(550, 90, 101, 17));
+        radioButton_11->setGeometry(QRect(540, 90, 101, 17));
         radioButton_12 = new QRadioButton(overlayTab);
         radioButton_12->setObjectName(QString::fromUtf8("radioButton_12"));
-        radioButton_12->setGeometry(QRect(660, 90, 82, 17));
+        radioButton_12->setGeometry(QRect(650, 90, 82, 17));
         radioButton_12->setChecked(false);
         label_35 = new QLabel(overlayTab);
         label_35->setObjectName(QString::fromUtf8("label_35"));
-        label_35->setGeometry(QRect(540, 110, 201, 20));
+        label_35->setGeometry(QRect(530, 110, 201, 20));
         label_35->setAlignment(Qt::AlignCenter);
         checkBox_55 = new QCheckBox(overlayTab);
         checkBox_55->setObjectName(QString::fromUtf8("checkBox_55"));
         checkBox_55->setGeometry(QRect(570, 130, 141, 17));
         radioButton_13 = new QRadioButton(overlayTab);
         radioButton_13->setObjectName(QString::fromUtf8("radioButton_13"));
-        radioButton_13->setGeometry(QRect(570, 170, 41, 17));
+        radioButton_13->setGeometry(QRect(560, 170, 41, 17));
         radioButton_14 = new QRadioButton(overlayTab);
         radioButton_14->setObjectName(QString::fromUtf8("radioButton_14"));
-        radioButton_14->setGeometry(QRect(620, 170, 41, 17));
+        radioButton_14->setGeometry(QRect(560, 190, 41, 17));
         radioButton_15 = new QRadioButton(overlayTab);
         radioButton_15->setObjectName(QString::fromUtf8("radioButton_15"));
-        radioButton_15->setGeometry(QRect(670, 170, 82, 17));
+        radioButton_15->setGeometry(QRect(560, 210, 82, 17));
         label_36 = new QLabel(overlayTab);
         label_36->setObjectName(QString::fromUtf8("label_36"));
         label_36->setGeometry(QRect(620, 150, 46, 13));
-        layoutWidget4 = new QWidget(overlayTab);
-        layoutWidget4->setObjectName(QString::fromUtf8("layoutWidget4"));
-        layoutWidget4->setGeometry(QRect(320, 130, 185, 19));
-        horizontalLayout_5 = new QHBoxLayout(layoutWidget4);
-        horizontalLayout_5->setSpacing(6);
-        horizontalLayout_5->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
-        horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
-        label_28 = new QLabel(layoutWidget4);
-        label_28->setObjectName(QString::fromUtf8("label_28"));
-
-        horizontalLayout_5->addWidget(label_28);
-
-        radioButton_3 = new QRadioButton(layoutWidget4);
-        radioButton_3->setObjectName(QString::fromUtf8("radioButton_3"));
-
-        horizontalLayout_5->addWidget(radioButton_3);
-
-        radioButton_4 = new QRadioButton(layoutWidget4);
-        radioButton_4->setObjectName(QString::fromUtf8("radioButton_4"));
-
-        horizontalLayout_5->addWidget(radioButton_4);
-
-        layoutWidget5 = new QWidget(overlayTab);
-        layoutWidget5->setObjectName(QString::fromUtf8("layoutWidget5"));
-        layoutWidget5->setGeometry(QRect(300, 230, 232, 43));
-        formLayout = new QFormLayout(layoutWidget5);
+        layoutWidget3 = new QWidget(overlayTab);
+        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
+        layoutWidget3->setGeometry(QRect(280, 230, 232, 43));
+        formLayout = new QFormLayout(layoutWidget3);
         formLayout->setSpacing(6);
         formLayout->setContentsMargins(11, 11, 11, 11);
         formLayout->setObjectName(QString::fromUtf8("formLayout"));
         formLayout->setHorizontalSpacing(2);
         formLayout->setVerticalSpacing(1);
         formLayout->setContentsMargins(0, 0, 0, 0);
-        label_30 = new QLabel(layoutWidget5);
+        label_30 = new QLabel(layoutWidget3);
         label_30->setObjectName(QString::fromUtf8("label_30"));
 
         formLayout->setWidget(0, QFormLayout::LabelRole, label_30);
 
-        label_31 = new QLabel(layoutWidget5);
+        label_31 = new QLabel(layoutWidget3);
         label_31->setObjectName(QString::fromUtf8("label_31"));
 
         formLayout->setWidget(1, QFormLayout::LabelRole, label_31);
 
-        label_32 = new QLabel(layoutWidget5);
+        label_32 = new QLabel(layoutWidget3);
         label_32->setObjectName(QString::fromUtf8("label_32"));
 
         formLayout->setWidget(2, QFormLayout::LabelRole, label_32);
 
-        layoutWidget6 = new QWidget(overlayTab);
-        layoutWidget6->setObjectName(QString::fromUtf8("layoutWidget6"));
-        layoutWidget6->setGeometry(QRect(300, 150, 231, 19));
-        horizontalLayout_6 = new QHBoxLayout(layoutWidget6);
-        horizontalLayout_6->setSpacing(6);
-        horizontalLayout_6->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
-        horizontalLayout_6->setContentsMargins(0, 0, 0, 0);
-        radioButton_5 = new QRadioButton(layoutWidget6);
-        radioButton_5->setObjectName(QString::fromUtf8("radioButton_5"));
-
-        horizontalLayout_6->addWidget(radioButton_5);
-
-        radioButton_6 = new QRadioButton(layoutWidget6);
-        radioButton_6->setObjectName(QString::fromUtf8("radioButton_6"));
-
-        horizontalLayout_6->addWidget(radioButton_6);
-
-        radioButton_7 = new QRadioButton(layoutWidget6);
-        radioButton_7->setObjectName(QString::fromUtf8("radioButton_7"));
-
-        horizontalLayout_6->addWidget(radioButton_7);
-
-        layoutWidget7 = new QWidget(overlayTab);
-        layoutWidget7->setObjectName(QString::fromUtf8("layoutWidget7"));
-        layoutWidget7->setGeometry(QRect(310, 170, 206, 19));
-        horizontalLayout_7 = new QHBoxLayout(layoutWidget7);
-        horizontalLayout_7->setSpacing(6);
-        horizontalLayout_7->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
-        horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
-        radioButton_8 = new QRadioButton(layoutWidget7);
-        radioButton_8->setObjectName(QString::fromUtf8("radioButton_8"));
-
-        horizontalLayout_7->addWidget(radioButton_8);
-
-        radioButton_9 = new QRadioButton(layoutWidget7);
-        radioButton_9->setObjectName(QString::fromUtf8("radioButton_9"));
-
-        horizontalLayout_7->addWidget(radioButton_9);
-
-        radioButton_10 = new QRadioButton(layoutWidget7);
-        radioButton_10->setObjectName(QString::fromUtf8("radioButton_10"));
-
-        horizontalLayout_7->addWidget(radioButton_10);
-
         radioButton_16 = new QRadioButton(overlayTab);
         radioButton_16->setObjectName(QString::fromUtf8("radioButton_16"));
-        radioButton_16->setGeometry(QRect(80, 30, 131, 17));
+        radioButton_16->setGeometry(QRect(70, 30, 131, 17));
+        radioButton_16->setChecked(true);
         radioButton_17 = new QRadioButton(overlayTab);
         radioButton_17->setObjectName(QString::fromUtf8("radioButton_17"));
-        radioButton_17->setGeometry(QRect(80, 50, 121, 17));
+        radioButton_17->setGeometry(QRect(70, 50, 121, 17));
         checkBox_56 = new QCheckBox(overlayTab);
         checkBox_56->setObjectName(QString::fromUtf8("checkBox_56"));
-        checkBox_56->setGeometry(QRect(560, 190, 181, 17));
+        checkBox_56->setGeometry(QRect(530, 230, 201, 17));
+        radioButton_18 = new QRadioButton(overlayTab);
+        radioButton_18->setObjectName(QString::fromUtf8("radioButton_18"));
+        radioButton_18->setGeometry(QRect(620, 170, 91, 17));
+        radioButton_19 = new QRadioButton(overlayTab);
+        radioButton_19->setObjectName(QString::fromUtf8("radioButton_19"));
+        radioButton_19->setGeometry(QRect(620, 190, 82, 17));
+        radioButton_20 = new QRadioButton(overlayTab);
+        radioButton_20->setObjectName(QString::fromUtf8("radioButton_20"));
+        radioButton_20->setGeometry(QRect(620, 210, 111, 17));
+        checkBox_57 = new QCheckBox(overlayTab);
+        checkBox_57->setObjectName(QString::fromUtf8("checkBox_57"));
+        checkBox_57->setGeometry(QRect(530, 250, 191, 17));
+        radioButton_3 = new QRadioButton(overlayTab);
+        radioButton_3->setObjectName(QString::fromUtf8("radioButton_3"));
+        radioButton_3->setGeometry(QRect(330, 140, 90, 17));
+        radioButton_4 = new QRadioButton(overlayTab);
+        radioButton_4->setObjectName(QString::fromUtf8("radioButton_4"));
+        radioButton_4->setGeometry(QRect(280, 140, 42, 17));
+        label_28 = new QLabel(overlayTab);
+        label_28->setObjectName(QString::fromUtf8("label_28"));
+        label_28->setGeometry(QRect(278, 120, 231, 20));
+        label_28->setAlignment(Qt::AlignCenter);
+        radioButton_5 = new QRadioButton(overlayTab);
+        radioButton_5->setObjectName(QString::fromUtf8("radioButton_5"));
+        radioButton_5->setGeometry(QRect(420, 160, 86, 17));
+        radioButton_7 = new QRadioButton(overlayTab);
+        radioButton_7->setObjectName(QString::fromUtf8("radioButton_7"));
+        radioButton_7->setGeometry(QRect(330, 160, 79, 17));
+        radioButton_6 = new QRadioButton(overlayTab);
+        radioButton_6->setObjectName(QString::fromUtf8("radioButton_6"));
+        radioButton_6->setGeometry(QRect(280, 160, 42, 17));
+        radioButton_10 = new QRadioButton(overlayTab);
+        radioButton_10->setObjectName(QString::fromUtf8("radioButton_10"));
+        radioButton_10->setGeometry(QRect(280, 180, 41, 17));
+        radioButton_8 = new QRadioButton(overlayTab);
+        radioButton_8->setObjectName(QString::fromUtf8("radioButton_8"));
+        radioButton_8->setGeometry(QRect(330, 180, 111, 17));
+        radioButton_9 = new QRadioButton(overlayTab);
+        radioButton_9->setObjectName(QString::fromUtf8("radioButton_9"));
+        radioButton_9->setGeometry(QRect(420, 140, 93, 17));
+        layoutWidget4 = new QWidget(overlayTab);
+        layoutWidget4->setObjectName(QString::fromUtf8("layoutWidget4"));
+        layoutWidget4->setGeometry(QRect(80, 220, 68, 15));
+        horizontalLayout_5 = new QHBoxLayout(layoutWidget4);
+        horizontalLayout_5->setSpacing(6);
+        horizontalLayout_5->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
+        resX = new QLabel(layoutWidget4);
+        resX->setObjectName(QString::fromUtf8("resX"));
+
+        horizontalLayout_5->addWidget(resX);
+
+        label_23 = new QLabel(layoutWidget4);
+        label_23->setObjectName(QString::fromUtf8("label_23"));
+        label_23->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_5->addWidget(label_23);
+
+        ResY = new QLabel(layoutWidget4);
+        ResY->setObjectName(QString::fromUtf8("ResY"));
+
+        horizontalLayout_5->addWidget(ResY);
+
         tabs->addTab(overlayTab, QString());
         debugtab = new QWidget();
         debugtab->setObjectName(QString::fromUtf8("debugtab"));
@@ -999,6 +1025,39 @@ public:
         debugWindow->setGeometry(QRect(10, 10, 721, 261));
         debugWindow->setReadOnly(true);
         tabs->addTab(debugtab, QString());
+        widget2 = new QWidget(centralWidget);
+        widget2->setObjectName(QString::fromUtf8("widget2"));
+        widget2->setGeometry(QRect(180, 340, 382, 31));
+        horizontalLayout_6 = new QHBoxLayout(widget2);
+        horizontalLayout_6->setSpacing(6);
+        horizontalLayout_6->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        horizontalLayout_6->setContentsMargins(0, 0, 0, 0);
+        resultsAutoHide_2 = new QCheckBox(widget2);
+        resultsAutoHide_2->setObjectName(QString::fromUtf8("resultsAutoHide_2"));
+
+        horizontalLayout_6->addWidget(resultsAutoHide_2);
+
+        resultsLive_2 = new QPushButton(widget2);
+        resultsLive_2->setObjectName(QString::fromUtf8("resultsLive_2"));
+
+        horizontalLayout_6->addWidget(resultsLive_2);
+
+        pushButton_2 = new QPushButton(widget2);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        horizontalLayout_6->addWidget(pushButton_2);
+
+        pushButton_3 = new QPushButton(widget2);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+
+        horizontalLayout_6->addWidget(pushButton_3);
+
+        label_39 = new QLabel(centralWidget);
+        label_39->setObjectName(QString::fromUtf8("label_39"));
+        label_39->setGeometry(QRect(5, 320, 741, 20));
+        label_39->setFont(font);
+        label_39->setAlignment(Qt::AlignCenter);
         TorTools->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(TorTools);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -1011,6 +1070,22 @@ public:
         statusBar = new QStatusBar(TorTools);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
         TorTools->setStatusBar(statusBar);
+        dockWidget = new QDockWidget(TorTools);
+        dockWidget->setObjectName(QString::fromUtf8("dockWidget"));
+        dockWidget->setMinimumSize(QSize(400, 312));
+        dockWidget->setMaximumSize(QSize(750, 312));
+        dockWidget->setMouseTracking(false);
+        dockWidget->setFloating(false);
+        dockWidget->setFeatures(QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable|QDockWidget::DockWidgetVerticalTitleBar);
+        dockWidget->setAllowedAreas(Qt::BottomDockWidgetArea);
+        dockWidgetContents_16 = new QWidget();
+        dockWidgetContents_16->setObjectName(QString::fromUtf8("dockWidgetContents_16"));
+        webView = new QWebView(dockWidgetContents_16);
+        webView->setObjectName(QString::fromUtf8("webView"));
+        webView->setGeometry(QRect(0, 0, 751, 311));
+        webView->setUrl(QUrl(QString::fromUtf8("about:blank")));
+        dockWidget->setWidget(dockWidgetContents_16);
+        TorTools->addDockWidget(static_cast<Qt::DockWidgetArea>(8), dockWidget);
 
         menuBar->addAction(menuTor_Tools_Alpha->menuAction());
         menuBar->addAction(menuTortools_emeraldev_com->menuAction());
@@ -1056,14 +1131,6 @@ public:
         tabs->setToolTip(QString());
 #endif // QT_NO_TOOLTIP
         label->setText(QApplication::translate("TorTools", "Combat Log Settings", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("TorTools", "Number of logs to keep before deletion:", 0, QApplication::UnicodeUTF8));
-#ifndef QT_NO_TOOLTIP
-        fileCounter->setToolTip(QApplication::translate("TorTools", "0 for unlimited", 0, QApplication::UnicodeUTF8));
-#endif // QT_NO_TOOLTIP
-        cAutoStart->setText(QApplication::translate("TorTools", "Start Combat Logging when TorTools starts", 0, QApplication::UnicodeUTF8));
-        groupBool->setText(QApplication::translate("TorTools", "Contribute to Group stats", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("TorTools", "Combat Log Directory:", 0, QApplication::UnicodeUTF8));
-        browseB->setText(QApplication::translate("TorTools", "Browse", 0, QApplication::UnicodeUTF8));
         autoGroup->setText(QApplication::translate("TorTools", "Automatically Determine Group", 0, QApplication::UnicodeUTF8));
         manGroup->setText(QApplication::translate("TorTools", "Group Me With These Players:", 0, QApplication::UnicodeUTF8));
         members->setText(QApplication::translate("TorTools", "List group members separated by spaces", 0, QApplication::UnicodeUTF8));
@@ -1130,6 +1197,17 @@ public:
         overlayB->setText(QApplication::translate("TorTools", "Turn On Overlay", 0, QApplication::UnicodeUTF8));
         ToggleLFG->setText(QApplication::translate("TorTools", "Turn On Group Finder", 0, QApplication::UnicodeUTF8));
         label_18->setText(QApplication::translate("TorTools", "Coming Soon", 0, QApplication::UnicodeUTF8));
+        checkBox_58->setText(QApplication::translate("TorTools", "Use Combat Log to determine character", 0, QApplication::UnicodeUTF8));
+        label_3->setText(QApplication::translate("TorTools", "Number of logs to keep before deletion:", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        fileCounter->setToolTip(QApplication::translate("TorTools", "0 for unlimited", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        cAutoStart->setText(QApplication::translate("TorTools", "Start Combat Logging when TorTools starts", 0, QApplication::UnicodeUTF8));
+        groupBool->setText(QApplication::translate("TorTools", "Contribute to Group Statistics Pool", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("TorTools", "Combat Log Directory:", 0, QApplication::UnicodeUTF8));
+        browseB->setText(QApplication::translate("TorTools", "Browse", 0, QApplication::UnicodeUTF8));
+        hmToggle->setText(QApplication::translate("TorTools", "Hardmodes", 0, QApplication::UnicodeUTF8));
+        label_38->setText(QApplication::translate("TorTools", "LFG Comment: ", 0, QApplication::UnicodeUTF8));
         tabs->setTabText(tabs->indexOf(mainTab), QApplication::translate("TorTools", "Control", 0, QApplication::UnicodeUTF8));
         tabs->setTabToolTip(tabs->indexOf(mainTab), QApplication::translate("TorTools", "Settings to enable, disable and configure features.", 0, QApplication::UnicodeUTF8));
         label_9->setText(QApplication::translate("TorTools", "Tor Tools Account Settings", 0, QApplication::UnicodeUTF8));
@@ -1296,19 +1374,11 @@ public:
         );
         tabs->setTabText(tabs->indexOf(accTab), QApplication::translate("TorTools", "Account", 0, QApplication::UnicodeUTF8));
         tabs->setTabToolTip(tabs->indexOf(accTab), QApplication::translate("TorTools", "Setup and manage your account and characters", 0, QApplication::UnicodeUTF8));
-        saveHTML->setText(QApplication::translate("TorTools", "Save Results", 0, QApplication::UnicodeUTF8));
-        loadHTML->setText(QApplication::translate("TorTools", "Load Results", 0, QApplication::UnicodeUTF8));
-        liveHTML->setText(QApplication::translate("TorTools", "Live Results", 0, QApplication::UnicodeUTF8));
-        tabs->setTabText(tabs->indexOf(resultsTab), QApplication::translate("TorTools", "Results", 0, QApplication::UnicodeUTF8));
-        tabs->setTabToolTip(tabs->indexOf(resultsTab), QApplication::translate("TorTools", "View combat statistics and group statistics.", 0, QApplication::UnicodeUTF8));
         label_19->setText(QApplication::translate("TorTools", "Overlay Position", 0, QApplication::UnicodeUTF8));
         label_20->setText(QApplication::translate("TorTools", "Horizontal", 0, QApplication::UnicodeUTF8));
         label_21->setText(QApplication::translate("TorTools", "Vertical", 0, QApplication::UnicodeUTF8));
-        updateOverlay->setText(QApplication::translate("TorTools", "Update", 0, QApplication::UnicodeUTF8));
+        updateOverlay->setText(QApplication::translate("TorTools", "Update Position", 0, QApplication::UnicodeUTF8));
         label_22->setText(QApplication::translate("TorTools", "Resolution:", 0, QApplication::UnicodeUTF8));
-        resX->setText(QApplication::translate("TorTools", "Error", 0, QApplication::UnicodeUTF8));
-        label_23->setText(QApplication::translate("TorTools", "x", 0, QApplication::UnicodeUTF8));
-        ResY->setText(QApplication::translate("TorTools", "Error", 0, QApplication::UnicodeUTF8));
         label_24->setText(QApplication::translate("TorTools", "Overlay Settings", 0, QApplication::UnicodeUTF8));
         label_25->setText(QApplication::translate("TorTools", "Detailed Section Settings", 0, QApplication::UnicodeUTF8));
         label_26->setText(QApplication::translate("TorTools", "The detailed section has 8 lines of display", 0, QApplication::UnicodeUTF8));
@@ -1316,7 +1386,7 @@ public:
         radioButton_2->setText(QApplication::translate("TorTools", "Use for LFG Tool", 0, QApplication::UnicodeUTF8));
         label_27->setText(QApplication::translate("TorTools", "Combat Stats Settings", 0, QApplication::UnicodeUTF8));
         label_29->setText(QApplication::translate("TorTools", "LFG Settings", 0, QApplication::UnicodeUTF8));
-        checkBox_54->setText(QApplication::translate("TorTools", "Use every other line to show LF info", 0, QApplication::UnicodeUTF8));
+        checkBox_54->setText(QApplication::translate("TorTools", "Use every other line to show details.", 0, QApplication::UnicodeUTF8));
         label_33->setText(QApplication::translate("TorTools", "Summary Section Settings", 0, QApplication::UnicodeUTF8));
         label_34->setText(QApplication::translate("TorTools", "The summary section has 3 lines of display", 0, QApplication::UnicodeUTF8));
         radioButton_11->setText(QApplication::translate("TorTools", "Use for combat", 0, QApplication::UnicodeUTF8));
@@ -1327,23 +1397,35 @@ public:
         radioButton_14->setText(QApplication::translate("TorTools", "HPS", 0, QApplication::UnicodeUTF8));
         radioButton_15->setText(QApplication::translate("TorTools", "TPS", 0, QApplication::UnicodeUTF8));
         label_36->setText(QApplication::translate("TorTools", "Sort By:", 0, QApplication::UnicodeUTF8));
-        label_28->setText(QApplication::translate("TorTools", "Sort by:", 0, QApplication::UnicodeUTF8));
-        radioButton_3->setText(QApplication::translate("TorTools", "Damage Done", 0, QApplication::UnicodeUTF8));
-        radioButton_4->setText(QApplication::translate("TorTools", "DPS", 0, QApplication::UnicodeUTF8));
         label_30->setText(QApplication::translate("TorTools", "Without this checked, every line will show the", 0, QApplication::UnicodeUTF8));
         label_31->setText(QApplication::translate("TorTools", "name of a character match found. Checking it", 0, QApplication::UnicodeUTF8));
         label_32->setText(QApplication::translate("TorTools", "will show what they are looking for, where able.", 0, QApplication::UnicodeUTF8));
-        radioButton_5->setText(QApplication::translate("TorTools", "Healing Done", 0, QApplication::UnicodeUTF8));
-        radioButton_6->setText(QApplication::translate("TorTools", "HPS", 0, QApplication::UnicodeUTF8));
-        radioButton_7->setText(QApplication::translate("TorTools", "Healing Rec", 0, QApplication::UnicodeUTF8));
-        radioButton_8->setText(QApplication::translate("TorTools", "Threat ", 0, QApplication::UnicodeUTF8));
-        radioButton_9->setText(QApplication::translate("TorTools", "Damage Taken", 0, QApplication::UnicodeUTF8));
-        radioButton_10->setText(QApplication::translate("TorTools", "TPS", 0, QApplication::UnicodeUTF8));
         radioButton_16->setText(QApplication::translate("TorTools", "Show Real-Time Stats", 0, QApplication::UnicodeUTF8));
         radioButton_17->setText(QApplication::translate("TorTools", "Show Delayed Stats", 0, QApplication::UnicodeUTF8));
-        checkBox_56->setText(QApplication::translate("TorTools", "Threat as percentage of tank's", 0, QApplication::UnicodeUTF8));
+        checkBox_56->setText(QApplication::translate("TorTools", "Show threat as percentage of Tank's", 0, QApplication::UnicodeUTF8));
+        radioButton_18->setText(QApplication::translate("TorTools", "Damage Done", 0, QApplication::UnicodeUTF8));
+        radioButton_19->setText(QApplication::translate("TorTools", "Healing Done", 0, QApplication::UnicodeUTF8));
+        radioButton_20->setText(QApplication::translate("TorTools", "Threat Generated", 0, QApplication::UnicodeUTF8));
+        checkBox_57->setText(QApplication::translate("TorTools", "Do not display off tank", 0, QApplication::UnicodeUTF8));
+        radioButton_3->setText(QApplication::translate("TorTools", "Damage Done", 0, QApplication::UnicodeUTF8));
+        radioButton_4->setText(QApplication::translate("TorTools", "DPS", 0, QApplication::UnicodeUTF8));
+        label_28->setText(QApplication::translate("TorTools", "Sort by:", 0, QApplication::UnicodeUTF8));
+        radioButton_5->setText(QApplication::translate("TorTools", "Healing Done", 0, QApplication::UnicodeUTF8));
+        radioButton_7->setText(QApplication::translate("TorTools", "Healing Rec", 0, QApplication::UnicodeUTF8));
+        radioButton_6->setText(QApplication::translate("TorTools", "HPS", 0, QApplication::UnicodeUTF8));
+        radioButton_10->setText(QApplication::translate("TorTools", "TPS", 0, QApplication::UnicodeUTF8));
+        radioButton_8->setText(QApplication::translate("TorTools", "Threat Generated", 0, QApplication::UnicodeUTF8));
+        radioButton_9->setText(QApplication::translate("TorTools", "Damage Taken", 0, QApplication::UnicodeUTF8));
+        resX->setText(QApplication::translate("TorTools", "Error", 0, QApplication::UnicodeUTF8));
+        label_23->setText(QApplication::translate("TorTools", "x", 0, QApplication::UnicodeUTF8));
+        ResY->setText(QApplication::translate("TorTools", "Error", 0, QApplication::UnicodeUTF8));
         tabs->setTabText(tabs->indexOf(overlayTab), QApplication::translate("TorTools", "Overlay", 0, QApplication::UnicodeUTF8));
         tabs->setTabText(tabs->indexOf(debugtab), QApplication::translate("TorTools", "Console", 0, QApplication::UnicodeUTF8));
+        resultsAutoHide_2->setText(QApplication::translate("TorTools", "Autohide during combat", 0, QApplication::UnicodeUTF8));
+        resultsLive_2->setText(QApplication::translate("TorTools", "Live Results", 0, QApplication::UnicodeUTF8));
+        pushButton_2->setText(QApplication::translate("TorTools", "Save Results", 0, QApplication::UnicodeUTF8));
+        pushButton_3->setText(QApplication::translate("TorTools", "Load Results", 0, QApplication::UnicodeUTF8));
+        label_39->setText(QApplication::translate("TorTools", "Results", 0, QApplication::UnicodeUTF8));
         menuTor_Tools_Alpha->setTitle(QApplication::translate("TorTools", "Tor Tools", 0, QApplication::UnicodeUTF8));
         menuTortools_emeraldev_com->setTitle(QApplication::translate("TorTools", "Help", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

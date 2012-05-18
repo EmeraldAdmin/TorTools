@@ -38,7 +38,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>4</number>
+    <number>0</number>
    </property>
    <property name="tabSpacing">
     <number>0</number>
@@ -99,7 +99,7 @@ p, li { white-space: pre-wrap; }
       <x>0</x>
       <y>0</y>
       <width>591</width>
-      <height>226</height>
+      <height>196</height>
      </rect>
     </property>
     <attribute name="label">
@@ -151,7 +151,7 @@ p, li { white-space: pre-wrap; }
       <x>0</x>
       <y>0</y>
       <width>591</width>
-      <height>226</height>
+      <height>196</height>
      </rect>
     </property>
     <attribute name="label">
@@ -187,39 +187,13 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="page_4">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>591</width>
-      <height>226</height>
-     </rect>
-    </property>
-    <attribute name="label">
-     <string>Results Tab</string>
-    </attribute>
-    <widget class="QPlainTextEdit" name="plainTextEdit">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>591</width>
-       <height>221</height>
-      </rect>
-     </property>
-     <property name="plainText">
-      <string>This tab is still in development. No functionality exists yet.</string>
-     </property>
-    </widget>
-   </widget>
    <widget class="QWidget" name="page_5">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
       <width>591</width>
-      <height>226</height>
+      <height>196</height>
      </rect>
     </property>
     <attribute name="label">
@@ -258,6 +232,44 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;Real-Time Statistics&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; will poll the server roughly every 3 seconds (two global cooldowns) for piecewise information that it sums and presents until the end of combat is reached. Note that in order for other party members to be shown with your statistics, they must also have real time selected. Real time statistics uses significantly more system resources, and thus may reduce game performance on slower systems.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;Delayed Statistics&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; is primarily selected to decrease system resource consumption, or for users who don't wish to have statistics changing on their screen during combat. Note that all party members must have delayed statistics selected to be grouped together.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>591</width>
+      <height>196</height>
+     </rect>
+    </property>
+    <attribute name="label">
+     <string>Results Window</string>
+    </attribute>
+    <widget class="QTextEdit" name="textEdit_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>601</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Results&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Overview&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Tor Tools' results are actually a rendered web page that is created every time combat completes. The only live results that will be displayed are available via the Overlay (see Overlay tab.)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;The results window can be undocked from the main window. If this happens, it will become semi-transparent, just like the overlay, and stick on top of other windows. This enables the full results of combat to be seen and managed without having to minimize the game. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;The undocked window can be moved to any desired position. You can also configure it to autohide (redock) itself when combat commences. When combat is complete, it will show once more on your screen.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Only one page is saved on the server per user. This means that new combat data will overwrite old. If you want to back up data to be viewed in more detail later, you can click the &amp;quot;Save Results&amp;quot; button, and select the folder to save it to. In similar fashion, old results can be loaded. To return to seeing live streaming results, click the &amp;quot;Live Results&amp;quot; button.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </widget>

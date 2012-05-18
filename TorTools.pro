@@ -14,7 +14,8 @@ SOURCES += main.cpp\
         tortools.cpp \
         overlay.cpp \
     helpwindow.cpp \
-    bufferflushtimed.cpp
+    bufferflushtimed.cpp \
+    filemon.cpp
 
 HEADERS  += tortools.h \
     overlay.h \
